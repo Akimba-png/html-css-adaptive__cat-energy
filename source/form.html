@@ -23,7 +23,7 @@
     </nav>
   </header>
   <main class="page-form">
-    <form class="page-form__form form" action="https://echo.htmlacademy.ru" method="get">
+    <form class="page-form__form form" action="https://echo.htmlacademy.ru" method="post">
       <div class="form__wrapper">
         <h1 class="form__title">Подбор программы</h1>
         <p class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
@@ -31,26 +31,18 @@
       <fieldset class="form__cat-info cat-info">
         <div class="cat-info__wrapper">
           <h2 class="visually-hidden">Информация о питомце</h2>
-          <ul class="cat-info__list">
-            <li class="cat-info__item">
-              <label>
-                Имя:<sup>&ast;</sup>
-                <input type="text" name="cat name" placeholder="Барсик" required>
-              </label>
-            </li>
-            <li class="cat-info__item">
-              <label>
-                Вес (кг):<sup>&ast;</sup>
-                <input type="number" name="cat weight" placeholder="7" required>
-              </label>
-            </li>
-            <li class="cat-info__item">
-              <label>
-                Возраст (лет):
-                <input type="number" name="cat age" placeholder="7">
-              </label>
-            </li>
-          </ul>
+          <label class="cat-info__item">
+            Имя:<sup>&ast;</sup>
+            <input type="text" name="name" placeholder="Барсик" required>
+          </label>
+          <label class="cat-info__item">
+            Вес (кг):<sup>&ast;</sup>
+            <input type="number" name="weight" placeholder="7" required>
+          </label>
+          <label class="cat-info__item">
+            Возраст (лет):
+            <input type="number" name="age" placeholder="7">
+          </label>
         </div>
       </fieldset>
       <fieldset class="form__purpose purpose">
@@ -86,7 +78,7 @@
             <li class="owner-data__item">
               <label>
                 Телефон:<sup>&ast;</sup>
-                <input type="tel" name="tel" placeholder="8 (960) 900-60-90" pattern="[0-9]{1} \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" title="[* (***) ***-**-**" required>
+                <input type="tel" name="tel" placeholder="8 (960) 900-60-90" pattern="[0-9]{11}" title="81234567890" required>
                 <!-- Здесь будет иконка телефона -->
               </label>
             </li>
@@ -107,19 +99,19 @@
           <h2 class="addition__title">Дополнительно</h2>
           <ul class="addition__list">
             <li class="addition__item">
-              <input type="checkbox" name="sweetener" id="sweetener" checked>
+              <input type="checkbox" name="addition" value="sweetener" id="sweetener" checked>
               <label for="sweetener">Сахарозаменитель</label>
             </li>
             <li class="addition__item">
-              <input type="checkbox" name="water" id="water">
+              <input type="checkbox" name="addition" value="water" id="water">
               <label for="water">Питьевая вода</label>
             </li>
             <li class="addition__item">
-              <input type="checkbox" name="milk" id="milk">
+              <input type="checkbox" name="addition" value="milk" id="milk">
               <label for="milk">Молоко</label>
             </li>
             <li class="addition__item">
-              <input type="checkbox" name="vitamin" id="vitamin">
+              <input type="checkbox" name="addition" value="vitamin" id="vitamin">
               <label for="vitamin">Витамины</label>
             </li>
           </ul>
