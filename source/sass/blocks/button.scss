@@ -1,0 +1,18 @@
+.button {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: $basic-white;
+  background-color: $basic-green;
+  cursor: pointer;
+  &:hover {
+    background-color: $basic-green-2;
+  }
+  &:active {
+    background-color: $basic-green-2;
+    color: rgba($basic-white, 0.3);
+  }
+}

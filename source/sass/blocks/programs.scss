@@ -1,0 +1,26 @@
+.programs__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.programs__item {
+  background-color: $basic-grey;
+}
+
+.programs__title {
+  @include oswald-normal-black;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 37px;
+}
+
+.programs__link {
+  @include oswald-normal-black;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+  &:active {
+    opacity: 0.3;
+  }
+}

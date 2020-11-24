@@ -1,0 +1,43 @@
+.instance {
+  background-color: $basic-dark-grey;
+}
+
+.instance__title {
+  @include oswald-normal-black;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.instance__purpose {
+  @include oswald-normal-black;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.instance__description {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.instance__lead {
+  @include oswald-normal-black;
+  text-transform: uppercase;
+  line-height: 20px;
+}
+
+.slider__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider__toggle {
+  @include oswald-normal-black;
+  border: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: transparent;
+  cursor: pointer;
+}

@@ -1,0 +1,12 @@
+.features__title {
+  @include oswald-normal-black;
+  margin: 0;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

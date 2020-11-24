@@ -1,0 +1,24 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+// Mixin
+
+@mixin oswald-normal-black {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: normal;
+  color: $basic-black;
+}
+
+
+
