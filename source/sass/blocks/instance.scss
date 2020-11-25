@@ -1,18 +1,21 @@
 .instance {
-  background-color: $basic-dark-grey;
+  background-color: $alternative-background-color;
 }
 
 .instance__title {
-  @include oswald-normal-black;
+  @include alternative-font;
+  font-weight: normal;
   font-size: 36px;
   line-height: 40px;
+  color: $title-color;
 }
 
 .instance__purpose {
-  @include oswald-normal-black;
+  @include alternative-font;
   text-transform: uppercase;
   font-size: 24px;
   line-height: 24px;
+  color: $title-color;
 }
 
 .instance__description {
@@ -21,9 +24,11 @@
 }
 
 .instance__lead {
-  @include oswald-normal-black;
+  @include alternative-font;
   text-transform: uppercase;
+  font-weight: normal;
   line-height: 20px;
+  color: $title-color;
 }
 
 

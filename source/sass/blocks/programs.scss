@@ -5,21 +5,24 @@
 }
 
 .programs__item {
-  background-color: $basic-grey;
+  background-color: $background-color;
 }
 
 .programs__title {
-  @include oswald-normal-black;
+  @include alternative-font;
   text-transform: uppercase;
+  font-weight: normal;
   font-size: 24px;
   line-height: 37px;
+  color: $title-color;
 }
 
 .programs__link {
-  @include oswald-normal-black;
+  @include alternative-font;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
+  color: $title-color;
   &:active {
     opacity: 0.3;
   }

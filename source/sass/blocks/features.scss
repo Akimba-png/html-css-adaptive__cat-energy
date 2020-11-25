@@ -1,8 +1,10 @@
 .features__title {
-  @include oswald-normal-black;
+  @include alternative-font;
   margin: 0;
+  font-weight: normal;
   font-size: 36px;
   line-height: 40px;
+  color: $title-color;
 }
 
 .features__list {

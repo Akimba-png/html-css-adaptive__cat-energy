@@ -1,14 +1,14 @@
 .promo {
+  @include alternative-font;
   position: relative;
-  font-family: "Oswald", "Arial", sans-serif;
-  color: $basic-white;
+  color: $icon-content-color;
   &::before {
     content: "";
     position: absolute;
     z-index: -1;
     width: 100%;
     min-height: 302px;
-    background-color: rgba($basic-green, 0.85);
+    background-color: rgba($main-color, 0.85);
   }
 }
 
