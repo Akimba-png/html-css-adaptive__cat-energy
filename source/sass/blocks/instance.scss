@@ -26,18 +26,4 @@
   line-height: 20px;
 }
 
-.slider__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 
-.slider__toggle {
-  @include oswald-normal-black;
-  border: none;
-  text-transform: uppercase;
-  font-size: 16px;
-  line-height: 20px;
-  background-color: transparent;
-  cursor: pointer;
-}
