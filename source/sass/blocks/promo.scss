@@ -2,6 +2,7 @@
   @include alternative-font;
   position: relative;
   color: $icon-content-color;
+
   &::before {
     content: "";
     position: absolute;
