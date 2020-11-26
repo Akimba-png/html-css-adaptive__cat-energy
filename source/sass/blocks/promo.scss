@@ -1,0 +1,26 @@
+.promo {
+  @include alternative-font;
+  position: relative;
+  color: $icon-content-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    min-height: 302px;
+    background-color: rgba($main-color, 0.85);
+  }
+}
+
+.promo__title {
+  margin: 0;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.promo__slogan {
+  text-transform: uppercase;
+  line-height: 14px;
+}

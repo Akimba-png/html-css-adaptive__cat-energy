@@ -1,0 +1,32 @@
+.instance {
+  background-color: $alternative-background-color;
+}
+
+.instance__title {
+  @include alternative-font;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
+  color: $title-color;
+}
+
+.instance__purpose {
+  @include alternative-font;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 24px;
+  color: $title-color;
+}
+
+.instance__description {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.instance__lead {
+  @include alternative-font;
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 20px;
+  color: $title-color;
+}

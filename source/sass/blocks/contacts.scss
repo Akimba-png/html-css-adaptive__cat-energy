@@ -1,0 +1,12 @@
+.contacts__advertisement {
+  @include alternative-font;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  color: $logo-color;
+}
+
+.contacts__address {
+  font-style: normal;
+  line-height: 20px;
+}
