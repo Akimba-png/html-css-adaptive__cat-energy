@@ -1,0 +1,33 @@
+.cat-info {
+  border: none;
+  border-bottom: 1px solid $dividing-line-color;
+}
+
+.cat-info__input {
+  @include alternative-font;
+  border: 1px solid $input-border-color;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  color: $text-color;
+  appearance: textfield;
+
+  &:hover {
+    border: 1px solid $owner-input-border-color;
+  }
+
+  &:focus {
+    border: 2px solid $text-color;
+    outline: none;
+  }
+
+  &::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+}

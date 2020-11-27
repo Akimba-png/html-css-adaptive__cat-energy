@@ -1,0 +1,19 @@
+.comment {
+  border: none;
+}
+
+.comment__title {
+  text-transform: none;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+  color: $title-color;
+}
+
+.comment__text {
+  @include alternative-font;
+  resize: none;
+  border: 1px solid $input-border-color;
+  text-transform: uppercase;
+  font-size: 18px;
+}

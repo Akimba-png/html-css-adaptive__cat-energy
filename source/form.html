@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -33,15 +34,15 @@
           <h2 class="visually-hidden">Информация о питомце</h2>
           <label class="cat-info__item">
             Имя:<sup>&ast;</sup>
-            <input type="text" name="name" placeholder="Барсик" required>
+            <input class="cat-info__input" type="text" name="name" placeholder="Барсик" required>
           </label>
           <label class="cat-info__item">
             Вес (кг):<sup>&ast;</sup>
-            <input type="number" name="weight" placeholder="7" required>
+            <input class="cat-info__input" type="number" name="weight" placeholder="7" required>
           </label>
           <label class="cat-info__item">
             Возраст (лет):
-            <input type="number" name="age" placeholder="7">
+            <input class="cat-info__input" type="number" name="age" placeholder="7">
           </label>
         </div>
       </fieldset>
@@ -71,14 +72,14 @@
             <li class="owner-data__item">
               <label>
                 e-mail:<sup>&ast;</sup>
-                <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                <input class="owner-data__input" type="email" name="email" placeholder="kuklachev@gmail.com" required>
                 <!-- Здесь будет иконка конверта -->
               </label>
             </li>
             <li class="owner-data__item">
               <label>
                 Телефон:<sup>&ast;</sup>
-                <input type="tel" name="tel" placeholder="8 (960) 900-60-90" title="81234567890" required>
+                <input class="owner-data__input" type="tel" name="tel" placeholder="8 (960) 900-60-90" title="81234567890" required>
                 <!-- Здесь будет иконка телефона -->
               </label>
             </li>
@@ -90,7 +91,7 @@
           <h2 class="comment__title">Комментарий</h2>
           <label>
             <span class="visually-hidden">Введите комментарий</span>
-            <textarea name="comment" cols="30" rows="10" placeholder="расскажите обо всех повадках кота"></textarea>
+            <textarea class="comment__text" name="comment" cols="30" rows="5" placeholder="расскажите обо всех повадках кота"></textarea>
           </label>
         </div>
       </fieldset>
@@ -119,7 +120,7 @@
       </fieldset>
       <button class="form__button button" type="submit">Отправить заявку</button>
       <p class="form__legend">
-        <small>&ast; &mdash; Обязательные поля</small>
+        <small class="form__legend-text">&ast; &mdash; Обязательные поля</small>
       </p>
     </form>
   </main>

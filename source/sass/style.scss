@@ -4,6 +4,7 @@
 
 // Blocks
 
+// index.html
 @import "blocks/page-header.scss";
 @import "blocks/main-navigation.scss";
 @import "blocks/promo.scss";
@@ -14,3 +15,11 @@
 @import "blocks/contacts.scss";
 @import "blocks/references.scss";
 @import "blocks/copyrights.scss";
+
+// form.html
+@import "blocks/form.scss";
+@import "blocks/cat-info.scss";
+@import "blocks/purpose.scss";
+@import "blocks/owner-data.scss";
+@import "blocks/comment.scss";
+@import "blocks/addition.scss";
