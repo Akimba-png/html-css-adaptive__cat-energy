@@ -22,8 +22,8 @@
 }
 
 .form__legend {
+  @include main-font;
   text-transform: none;
-  font-family: "Arial", sans-serif;
   line-height: 16px;
   color: $title-color;
 }

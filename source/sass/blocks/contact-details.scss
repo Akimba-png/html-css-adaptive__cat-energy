@@ -1,8 +1,8 @@
-.owner-data {
+.contact-details {
   border: none;
 }
 
-.owner-data__title {
+.contact-details__title {
   text-transform: none;
   font-weight: normal;
   font-size: 24px;
@@ -10,13 +10,13 @@
   color: $title-color;
 }
 
-.owner-data__list {
+.contact-details__list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.owner-data__input {
+.contact-details__input {
   @include alternative-font;
   border: 1px solid $owner-input-border-color;
   text-transform: uppercase;

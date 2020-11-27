@@ -59,6 +59,10 @@ a {
 
 // Mixin
 
+@mixin main-font {
+  font-family: "Arial", sans-serif;
+}
+
 @mixin alternative-font {
   font-family: "Oswald", "Arial", sans-serif;
 }
