@@ -1,0 +1,26 @@
+.contact-details {
+  border: none;
+}
+
+.contact-details__title {
+  text-transform: none;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+  color: $title-color;
+}
+
+.contact-details__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-details__input {
+  @include alternative-font;
+  border: 1px solid $owner-input-border-color;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  color: $text-color;
+}

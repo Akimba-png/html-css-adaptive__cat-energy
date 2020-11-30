@@ -1,0 +1,18 @@
+.addition {
+  border: none;
+}
+
+.addition__title {
+  text-transform: none;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+  color: $title-color;
+}
+
+.addition__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: $title-color;
+}
