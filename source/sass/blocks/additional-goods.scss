@@ -1,0 +1,52 @@
+.additional-goods__title {
+  @include alternative-font;
+  margin: 0;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  color: $title-color;
+}
+
+.additional-goods__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.additional-goods__item {
+  border: 1px solid $owner-input-border-color;
+}
+
+.additional-goods__item-title {
+  @include alternative-font;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: $subtitle-color;
+}
+
+.additional-goods__properties {
+  line-height: 14px;
+}
+
+.additional-goods__definition {
+  margin: 0;
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+}
+
+.additional-goods__button {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.additional-goods__promo {
+  font-size: 16px;
+  line-height: 20px;
+  color: $icon-content-color;
+  background-color: $main-color;
+}
