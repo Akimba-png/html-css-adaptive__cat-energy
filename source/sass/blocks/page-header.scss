@@ -5,3 +5,18 @@
   font-size: 20px;
   line-height: 20px;
 }
+
+.page-header__wrapper {
+  @include small-size;
+  min-height: 65px;
+
+  outline: 1px solid orange;
+
+  @media (min-width: $tab-version) {
+    @include medium-size;
+  }
+}
+
+.page-header__logo {
+  display: block;
+}

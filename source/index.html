@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,11 +12,13 @@
   <header class="page-header">
     <div class="page-header__wrapper">
       <a class="page-header__logo logo">
-        <img src="https://via.placeholder.com/150x150" width="190" height="38" alt="Логотип компании Cat energy">
+        <img src="https://via.placeholder.com/150x150" width="34" height="38" alt="Логотип компании Cat energy">
       </a>
-      <button class="page-header__navigation-toggle" type="button"><span class="visually-hidden">переключить отображение меню навигации</span></button>
     </div>
-    <nav class="page-header__main-navigation main-navigation">
+    <nav class="page-header__main-navigation main-navigation main-navigation--no-js">
+      <div class="main-navigation__wrapper">
+        <button class="main-navigation__navigation-toggle" type="button"><span class="visually-hidden">переключить отображение меню навигации</span></button>
+      </div>
       <ul class="main-navigation__list">
         <li class="main-navigation__item main-navigation__item--active"><a>Главная</a></li>
         <li class="main-navigation__item"><a href="catalog.html">Каталог продукции</a></li>
@@ -126,6 +129,16 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const menu = document.querySelector(".main-navigation");
+    const menuToggle = menu.querySelector(".main-navigation__navigation-toggle");
+
+    menu.classList.remove("main-navigation--no-js");
+    menuToggle.addEventListener("click", function () {
+      menu.classList.toggle("main-navigation--opened");
+    });
+  </script>
 </body>
 
 </html>

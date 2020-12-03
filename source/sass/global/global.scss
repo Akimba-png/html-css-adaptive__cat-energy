@@ -9,6 +9,7 @@ a {
 }
 
 .page {
+  height: 100%;
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -19,6 +20,7 @@ a {
 .page__body {
   margin: 0;
   padding: 0;
+  min-height: 100%;
   color: $text-color;
 }
 
@@ -65,4 +67,15 @@ a {
 
 @mixin alternative-font {
   font-family: "Oswald", "Arial", sans-serif;
+}
+
+@mixin small-size {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 280px;
+}
+
+@mixin medium-size {
+  padding: 0 30px;
+  width: 708px;
 }
