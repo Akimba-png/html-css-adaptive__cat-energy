@@ -4,19 +4,35 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desctop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .page-header__wrapper {
-  @include small-size;
-  min-height: 65px;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
 
-  outline: 1px solid orange;
-
-  @media (min-width: $tab-version) {
-    @include medium-size;
+  @media (min-width: $desctop-width) {
+    padding: 0 110px;
   }
 }
 
 .page-header__logo {
   display: block;
+
+  @media (max-width: $mobile-only) {
+    padding-left: 20px;
+  }
 }

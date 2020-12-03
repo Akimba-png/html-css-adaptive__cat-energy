@@ -20,6 +20,7 @@ a {
 .page__body {
   margin: 0;
   padding: 0;
+  min-width: 320px;
   min-height: 100%;
   color: $text-color;
 }
@@ -69,13 +70,3 @@ a {
   font-family: "Oswald", "Arial", sans-serif;
 }
 
-@mixin small-size {
-  margin: 0 auto;
-  padding: 0 20px;
-  width: 280px;
-}
-
-@mixin medium-size {
-  padding: 0 30px;
-  width: 708px;
-}
