@@ -1,0 +1,13 @@
+.main-goods__title {
+  @include alternative-font;
+  margin: 0;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  color: $title-color;
+}
+
+.main-goods__list {
+  margin: 0;
+  padding: 0;
+}

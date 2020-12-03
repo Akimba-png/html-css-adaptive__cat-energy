@@ -1,0 +1,47 @@
+.lot {
+  border-top: 1px solid $main-goods-border-color;
+  border-bottom: 1px solid $main-goods-border-color;
+}
+
+.lot__title {
+  @include alternative-font;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: $subtitle-color;
+}
+
+.lot__properties {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.lot__definition {
+  margin: 0;
+}
+
+.lot__button {
+  font-size: 16px;
+  line-height: 20px;
+
+  &--show-all {
+    color: $text-color;
+    background-color: $background-color;
+
+    &:hover {
+      background-color: $main-goods-border-color;
+    }
+
+    &:active {
+      color: rgba($text-color, 0.3);
+    }
+  }
+}
+
+.lot__text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+}

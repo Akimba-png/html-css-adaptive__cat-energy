@@ -1,3 +1,7 @@
+.contacts--background {
+  background-color: $background-color;
+}
+
 .contacts__advertisement {
   @include alternative-font;
   text-transform: uppercase;
