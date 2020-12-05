@@ -19,8 +19,12 @@ $subtitle-color: #222222;
 $error-color: #ff8282;
 $main-goods-border-color: #ebebeb;
 
-
 // Sizes
 $mobile-only: 767px;
 $tablet-width: 768px;
 $desctop-width: 1440px;
+
+// Indents
+$mobile-indent: (20 / 320) * 100%;
+$tablet-indent: (30 / 768) * 100%;
+$desctop-indent: (110 / 1440) * 100%;

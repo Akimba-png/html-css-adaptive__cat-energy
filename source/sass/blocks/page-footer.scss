@@ -1,0 +1,32 @@
+.page-footer {
+  @media (min-width: $desctop-width) {
+    display: grid;
+  }
+}
+
+.page-footer__contacts {
+  @media (min-width: $desctop-width) {
+    margin-left: $desctop-indent;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    z-index: 1;
+  }
+}
+
+.page-footer__map-block {
+  @media (min-width: $desctop-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+  }
+}
+
+.page-footer__map {
+  display: block;
+  width: 100%;
+}
+
+.page-footer__references {
+  @media (min-width: $desctop-width) {
+    grid-column: 1 / 2;
+  }
+}

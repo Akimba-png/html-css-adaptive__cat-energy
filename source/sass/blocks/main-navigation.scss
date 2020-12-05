@@ -3,14 +3,14 @@
   width: auto;
 
   @media (min-width: $tablet-width) {
-    min-width: 62%
+    min-width: 62%;
   }
 }
 
 .main-navigation__navigation-toggle {
   position: absolute;
   top: -30px;
-  right: 20px;
+  right: $mobile-indent;
   padding: 0;
   width: 24px;
   height: 18px;

@@ -1,7 +1,23 @@
+.programs__wrapper {
+  @include mobile-padding;
+
+  @media (min-width: $tablet-width) {
+    @include tablet-padding;
+  }
+
+  @media (min-width: $desctop-width) {
+    @include desctop-padding;
+  }
+}
+
 .programs__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $desctop-width) {
+    display: flex;
+  }
 }
 
 .programs__item {
@@ -10,11 +26,16 @@
 
 .programs__title {
   @include alternative-font;
+  margin: 0;
   text-transform: uppercase;
   font-weight: normal;
   font-size: 24px;
   line-height: 37px;
   color: $title-color;
+}
+
+.programs__feature {
+  margin: 0;
 }
 
 .programs__link {

@@ -21,11 +21,12 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
+
+    @include tablet-padding;
   }
 
   @media (min-width: $desctop-width) {
-    padding: 0 110px;
+    @include desctop-padding;
   }
 }
 
@@ -33,6 +34,6 @@
   display: block;
 
   @media (max-width: $mobile-only) {
-    padding-left: 20px;
+    @include mobile-padding;
   }
 }

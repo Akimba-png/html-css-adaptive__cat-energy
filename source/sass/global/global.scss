@@ -60,8 +60,7 @@ a {
   overflow: hidden;
 }
 
-// Mixin
-
+// Fonts
 @mixin main-font {
   font-family: "Arial", sans-serif;
 }
@@ -70,3 +69,15 @@ a {
   font-family: "Oswald", "Arial", sans-serif;
 }
 
+// Paddings
+@mixin mobile-padding {
+  padding: 0 $mobile-indent;
+}
+
+@mixin tablet-padding {
+  padding: 0 $tablet-indent;
+}
+
+@mixin desctop-padding {
+  padding: 0 $desctop-indent;
+}

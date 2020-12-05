@@ -1,9 +1,22 @@
-.contacts--background {
-  background-color: $background-color;
+.contacts__wrapper {
+  @include mobile-padding;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    @include tablet-padding;
+  }
+
+  @media (min-width: $desctop-width) {
+    padding: 0;
+    width: 30%;
+    background-color: $icon-content-color;
+  }
 }
 
 .contacts__advertisement {
   @include alternative-font;
+  margin: 0;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
