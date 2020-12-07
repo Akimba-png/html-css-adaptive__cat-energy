@@ -1,3 +1,34 @@
 .references {
   background-color: $background-color;
 }
+
+.references__wrapper {
+  @include mobile-padding;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    @include tablet-padding;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include desktop-padding;
+  }
+}
+
+.references__logo {
+  text-align: center;
+}
+
+.references__social-list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid $dividing-line-color;
+  border-bottom: 1px solid $dividing-line-color;
+  list-style: none;
+}

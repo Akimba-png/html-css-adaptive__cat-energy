@@ -9,6 +9,7 @@ a {
 }
 
 .page {
+  height: 100%;
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -19,6 +20,8 @@ a {
 .page__body {
   margin: 0;
   padding: 0;
+  min-width: 320px;
+  min-height: 100%;
   color: $text-color;
 }
 
@@ -57,12 +60,24 @@ a {
   overflow: hidden;
 }
 
-// Mixin
-
+// Fonts
 @mixin main-font {
   font-family: "Arial", sans-serif;
 }
 
 @mixin alternative-font {
   font-family: "Oswald", "Arial", sans-serif;
+}
+
+// Paddings
+@mixin mobile-padding {
+  padding: 0 $mobile-indent;
+}
+
+@mixin tablet-padding {
+  padding: 0 $tablet-indent;
+}
+
+@mixin desktop-padding {
+  padding: 0 $desktop-indent;
 }

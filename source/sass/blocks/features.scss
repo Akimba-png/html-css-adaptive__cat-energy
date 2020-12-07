@@ -1,3 +1,15 @@
+.features__wrapper {
+  @include mobile-padding;
+
+  @media (min-width: $tablet-width) {
+    @include tablet-padding;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include desktop-padding;
+  }
+}
+
 .features__title {
   @include alternative-font;
   margin: 0;
@@ -8,7 +20,14 @@
 }
 
 .features__list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }

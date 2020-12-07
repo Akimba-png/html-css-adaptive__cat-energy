@@ -3,6 +3,10 @@
   position: relative;
   color: $icon-content-color;
 
+  @media (min-width: $desktop-width) {
+    position: initial;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -10,17 +14,109 @@
     width: 100%;
     min-height: 302px;
     background-color: rgba($main-color, 0.85);
+
+    @media (min-width: $tablet-width) {
+      background-color: transparent;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 59%;
+      height: 200px;
+      background-color: rgba($main-color, 0.85);
+    }
+  }
+}
+
+.promo__wrapper {
+  display: grid;
+
+  @include mobile-padding;
+
+  @media (min-width: $tablet-width) {
+    @include tablet-padding;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include desktop-padding;
   }
 }
 
 .promo__title {
   margin: 0;
+  text-align: center;
   font-weight: normal;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 12%;
+    width: 59%;
+    text-align: left;
+    font-size: 60px;
+    line-height: 60px;
+    color: $title-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-left: 6.5%;
+    width: 34%;
+  }
 }
 
 .promo__slogan {
+  margin: 0;
+  text-align: center;
   text-transform: uppercase;
   line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 12%;
+    text-align: left;
+    font-size: 20px;
+    line-height: 20px;
+    color: $title-color;
+
+    @media (min-width: $desktop-width) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      margin-left: 6.5%;
+    }
+  }
+}
+
+.promo__link {
+  order: 4;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    margin-top: 40px;
+    margin-left: 12%;
+    width: 35%;
+    height: 30px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 6.5%;
+  }
+}
+
+.promo__image {
+  display: block;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 1 / 4;
+  }
 }
