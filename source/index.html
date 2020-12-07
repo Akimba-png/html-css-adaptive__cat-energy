@@ -14,8 +14,8 @@
       <a class="page-header__logo logo">
         <img src="https://via.placeholder.com/150x150" width="34" height="38" alt="Логотип компании Cat energy">
       </a>
-      <nav class="page-header__main-navigation main-navigation main-navigation--no-js">
-        <button class="main-navigation__navigation-toggle" type="button"><span class="visually-hidden">переключить отображение меню навигации</span></button>
+      <nav class="page-header__main-navigation main-navigation js-main-navigation js-main-navigation--no-js">
+        <button class="main-navigation__navigation-toggle js-main-navigation__navigation-toggle" type="button"><span class="visually-hidden">переключить отображение меню навигации</span></button>
         <ul class="main-navigation__list">
           <li class="main-navigation__item main-navigation__item--active"><a>Главная</a></li>
           <li class="main-navigation__item"><a href="catalog.html">Каталог продукции</a></li>
@@ -129,15 +129,8 @@
     </div>
   </footer>
 
-  <script>
-    const menu = document.querySelector(".main-navigation");
-    const menuToggle = menu.querySelector(".main-navigation__navigation-toggle");
+  <script src="js/main-navigation.js"></script>
 
-    menu.classList.remove("main-navigation--no-js");
-    menuToggle.addEventListener("click", function () {
-      menu.classList.toggle("main-navigation--opened");
-    });
-  </script>
 </body>
 
 </html>

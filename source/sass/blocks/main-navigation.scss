@@ -34,7 +34,7 @@
   }
 }
 
-.main-navigation--opened .main-navigation__navigation-toggle {
+.js-main-navigation--opened .main-navigation__navigation-toggle {
   position: absolute;
   right: 23px;
   width: 18px;
@@ -91,16 +91,16 @@
   }
 }
 
-.main-navigation--opened .main-navigation__item {
+.js-main-navigation--opened .main-navigation__item {
   display: block;
 }
 
-.main-navigation--no-js {
+.js-main-navigation--no-js {
   .main-navigation__item {
     display: block;
   }
 
-  .main-navigation__navigation-toggle {
+  .js-main-navigation__navigation-toggle {
     display: none;
   }
 }

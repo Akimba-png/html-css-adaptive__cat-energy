@@ -5,8 +5,8 @@
     @include tablet-padding;
   }
 
-  @media (min-width: $desctop-width) {
-    @include desctop-padding;
+  @media (min-width: $desktop-width) {
+    @include desktop-padding;
   }
 }
 
@@ -15,7 +15,7 @@
   padding: 0;
   list-style: none;
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     display: flex;
   }
 }

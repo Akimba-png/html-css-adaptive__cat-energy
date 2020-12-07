@@ -3,7 +3,7 @@
   position: relative;
   color: $icon-content-color;
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     position: initial;
   }
 
@@ -19,7 +19,7 @@
       background-color: transparent;
     }
 
-    @media (min-width: $desctop-width) {
+    @media (min-width: $desktop-width) {
       position: absolute;
       top: 0;
       right: 0;
@@ -39,8 +39,8 @@
     @include tablet-padding;
   }
 
-  @media (min-width: $desctop-width) {
-    @include desctop-padding;
+  @media (min-width: $desktop-width) {
+    @include desktop-padding;
   }
 }
 
@@ -60,7 +60,7 @@
     color: $title-color;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     margin-left: 6.5%;
@@ -81,7 +81,7 @@
     line-height: 20px;
     color: $title-color;
 
-    @media (min-width: $desctop-width) {
+    @media (min-width: $desktop-width) {
       grid-column: 1 / 2;
       grid-row: 2 / 3;
       margin-left: 6.5%;
@@ -102,7 +102,7 @@
     text-align: left;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     margin-left: 6.5%;
   }
 }
@@ -116,7 +116,7 @@
     grid-row: 3 / 5;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     grid-row: 1 / 4;
   }
 }

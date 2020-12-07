@@ -11,7 +11,7 @@
     line-height: 24px;
   }
 
-  @media (min-width: $desctop-width) {
+  @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
   }
@@ -25,8 +25,8 @@
     @include tablet-padding;
   }
 
-  @media (min-width: $desctop-width) {
-    @include desctop-padding;
+  @media (min-width: $desktop-width) {
+    @include desktop-padding;
   }
 }
 

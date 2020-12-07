@@ -14,8 +14,8 @@
     align-items: center;
   }
 
-  @media (min-width: $desctop-width) {
-    @include desctop-padding;
+  @media (min-width: $desktop-width) {
+    @include desktop-padding;
   }
 }
 
