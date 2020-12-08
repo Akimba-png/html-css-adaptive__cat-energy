@@ -1,6 +1,29 @@
 .cat-info {
   border: none;
   border-bottom: 1px solid $dividing-line-color;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
+.cat-info__wrapper {
+  @include mobile-padding;
+
+  @media (min-width: $tablet-width) {
+    @include tablet-padding;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    padding-left: (110 / 680) * 100%;
+  }
+}
+
+.cat-info__item {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
 }
 
 .cat-info__input {
@@ -11,6 +34,10 @@
   line-height: 18px;
   color: $text-color;
   appearance: textfield;
+
+  &--grid {
+    grid-column: 2 / 4;
+  }
 
   &:hover {
     border: 1px solid $owner-input-border-color;

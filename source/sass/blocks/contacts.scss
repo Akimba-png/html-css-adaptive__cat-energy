@@ -3,6 +3,10 @@
   display: flex;
   justify-content: space-between;
 
+  &--background {
+    background-color: $background-color;
+  }
+
   @media (min-width: $tablet-width) {
     @include tablet-padding;
   }
