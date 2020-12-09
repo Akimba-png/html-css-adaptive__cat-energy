@@ -2,7 +2,20 @@
   border: none;
 }
 
+.addition__wrapper {
+  @include mobile-padding;
+
+  @media (min-width: $tablet-width) {
+    @include tablet-padding;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include desktop-padding;
+  }
+}
+
 .addition__title {
+  margin: 0;
   text-transform: none;
   font-weight: normal;
   font-size: 24px;
@@ -11,8 +24,15 @@
 }
 
 .addition__list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   list-style: none;
   color: $title-color;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
