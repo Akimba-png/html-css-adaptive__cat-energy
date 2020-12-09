@@ -31,4 +31,8 @@
   border-top: 1px solid $dividing-line-color;
   border-bottom: 1px solid $dividing-line-color;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
 }

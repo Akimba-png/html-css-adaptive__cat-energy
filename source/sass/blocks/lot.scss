@@ -1,11 +1,43 @@
 .lot {
+  position: relative;
   border-bottom: 1px solid $main-goods-border-color;
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    min-height: 511px;
+    border: none;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+      width: 100%;
+      min-height: 430px;
+      background-color: $background-color;
+    }
+
+    &:last-child::before {
+      box-sizing: border-box;
+      border: 2px solid $background-color;
+      background-color: transparent;
+    }
+  }
 }
 
 .lot__wrapper {
   @include mobile-padding;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 37px;
+    height: 100%;
+  }
 }
 
 .lot__link-title--all {
@@ -29,6 +61,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    order: -1;
+  }
 }
 
 .lot__properties {
@@ -38,14 +74,19 @@
   line-height: 16px;
 }
 
+.lot__propertie {
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid $owner-input-border-color;
+  }
+}
+
 .lot__definition {
   margin: 0;
   text-align: right;
-}
 
-.lot__text {
-  grid-column: 1 / 3;
-  text-align: center;
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid $owner-input-border-color;
+  }
 }
 
 .lot__button {
@@ -68,6 +109,8 @@
 }
 
 .lot__text {
+  grid-column: 1 / 3;
+  text-align: center;
   margin: 0;
   font-size: 12px;
   line-height: 16px;
