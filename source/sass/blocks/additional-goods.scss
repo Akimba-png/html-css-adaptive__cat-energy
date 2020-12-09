@@ -1,3 +1,7 @@
+.additional-goods__wrapper {
+  @include mobile-padding;
+}
+
 .additional-goods__title {
   @include alternative-font;
   margin: 0;
@@ -10,12 +14,15 @@
 .additional-goods__list {
   margin: 0;
   padding: 0;
+  border-top: 1px solid $owner-input-border-color;
   list-style: none;
 }
 
 .additional-goods__item {
-  border: 1px solid $owner-input-border-color;
+  display: grid;
+  border-bottom: 1px solid $owner-input-border-color;
 }
+
 
 .additional-goods__item-title {
   @include alternative-font;
@@ -28,6 +35,8 @@
 }
 
 .additional-goods__properties {
+  display: flex;
+  justify-content: space-between;
   line-height: 14px;
 }
 

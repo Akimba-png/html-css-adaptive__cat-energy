@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,15 +13,15 @@
     <div class="page-header__wrapper">
       <a class="page-header__logo logo" href="index.html">
         <span class="visually-hidden">Перейти на главную страницу</span>
-        <img src="https://via.placeholder.com/150x150" width="190" height="38" alt="Логотип компании Cat energy">
+        <img src="https://via.placeholder.com/150x150" width="34" height="38" alt="Логотип компании Cat energy">
       </a>
-      <button class="page-header__navigation-toggle" type="button"><span class="visually-hidden">переключить отображение меню навигации</span></button>
     </div>
-    <nav class="page-header__main-navigation main-navigation">
+    <nav class="page-header__main-navigation main-navigation js-main-navigation main-navigation--no-js">
+      <button class="main-navigation__navigation-toggle js-main-navigation-toggle" type="button"><span class="visually-hidden">переключить отображение меню навигации</span></button>
       <ul class="main-navigation__list">
         <li class="main-navigation__item"><a href="index.html">Главная</a></li>
         <li class="main-navigation__item main-navigation__item--active"><a>Каталог продукции</a></li>
-        <li class="main-navigation__item "><a href="form.html">Подбор программы</a></li>
+        <li class="main-navigation__item"><a href="form.html">Подбор программы</a></li>
       </ul>
     </nav>
   </header>
@@ -164,7 +165,7 @@
         </li>
         <li class="main-goods__item lot">
           <div class="lot__wrapper">
-            <a class="lot__link-title" href="blank.html">
+            <a class="lot__link-title lot__link-title--all" href="blank.html">
               <h3 class="lot__title">Показать еще 100500 товаров</h3>
             </a>
             <p class="lot__text">На самом деле вкусов гораздо больше!</p>
@@ -225,8 +226,8 @@
     </section>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__contacts contacts contacts--background">
-      <div class="contacts__wrapper">
+    <div class="page-footer__contacts contacts">
+      <div class="contacts__wrapper contacts__wrapper--background">
         <p class="contacts__advertisement">Приглашаем к сотрудничеству дилеров!</p>
         <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
@@ -243,9 +244,9 @@
           <img src="https://via.placeholder.com/150x150" width="128" height="24" alt="Логотип компании Cat energy">
         </a>
         <ul class="references__social-list">
-          <li class="references__social-item"><a class="references__social-link references__social-link--vk" href="blank.html"><span class="visually-hidden">страница компании cat energy в vk</span></a></li>
-          <li class="references__social-item"><a class="references__social-link references__social-link--instagram" href="blank.html"><span class="visually-hidden">страница компании cat energy в instagram</span></a></li>
-          <li class="references__social-item"><a class="references__social-link references__social-link--facebook" href="blank.html"><span class="visually-hidden">страница компании cat energy в facebook</span></a></li>
+          <li class="references__social-item"><a class="references__social-link references__social-link--vk" href="blank.html"><span class="visually-hidden">страница компании cat energy в vk</span>vk</a></li>
+          <li class="references__social-item"><a class="references__social-link references__social-link--instagram" href="blank.html"><span class="visually-hidden">страница компании cat energy в instagram</span>inst</a></li>
+          <li class="references__social-item"><a class="references__social-link references__social-link--facebook" href="blank.html"><span class="visually-hidden">страница компании cat energy в facebook</span>fb</a></li>
         </ul>
         <div class="references__copyrights copyrights">
           <a class="copyrights__link" href="https://htmlacademy.ru/intensive/adaptive">HTML&nbsp;Academy</a>
@@ -254,6 +255,9 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/main-navigation.js"></script>
+
 </body>
 
 </html>
