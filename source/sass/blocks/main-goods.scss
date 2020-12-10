@@ -10,6 +10,10 @@
   @media (min-width: $tablet-width) {
     @include tablet-padding;
   }
+
+  @media (min-width: $desktop-width) {
+    @include desktop-padding;
+  }
 }
 
 .main-goods__title {
@@ -39,5 +43,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: (60 / 708) * 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: (80 / 1220) * 100%;
   }
 }

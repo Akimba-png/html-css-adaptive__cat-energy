@@ -24,6 +24,10 @@
       background-color: transparent;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+  }
 }
 
 .lot__wrapper {
