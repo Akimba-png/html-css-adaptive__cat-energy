@@ -1,13 +1,51 @@
+.main-goods {
+  border-top: 1px solid $dividing-line-color;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
+.main-goods__wrapper {
+  @media (min-width: $tablet-width) {
+    @include tablet-padding;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include desktop-padding;
+  }
+}
+
 .main-goods__title {
   @include alternative-font;
   margin: 0;
+  padding-left: $mobile-indent;
+  border-bottom: 1px solid $main-goods-border-color;
   font-weight: normal;
   font-size: 36px;
   line-height: 36px;
   color: $title-color;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    padding: 0;
+  }
 }
 
 .main-goods__list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: (60 / 708) * 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: (80 / 1220) * 100%;
+  }
 }
