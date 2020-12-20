@@ -9,7 +9,7 @@
 
 .main-navigation__navigation-toggle {
   position: absolute;
-  top: -30px;
+  top: -42px;
   right: $mobile-indent;
   padding: 0;
   width: 24px;
@@ -75,8 +75,17 @@
 }
 
 .main-navigation__item {
+  padding-top: 22px;
+  padding-bottom: 23px;
   text-align: center;
 
+  @media (max-width: $mobile-only) {
+    display: none;
+    border-top: 1px solid $navigation-border-line;
+  }
+}
+
+.main-navigation__item-link {
   &:hover {
     opacity: 0.6;
   }
@@ -85,9 +94,10 @@
     opacity: 0.3;
   }
 
-  @media (max-width: $mobile-only) {
-    display: none;
-    border-top: 1px solid $navigation-border-line;
+  &--active {
+    @media (min-width: $tablet-width) {
+      box-shadow: 0 7px 0 0 $icon-content-color, 0 9px 0 0 $main-color;
+    }
   }
 }
 

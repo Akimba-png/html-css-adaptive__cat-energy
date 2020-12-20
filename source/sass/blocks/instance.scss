@@ -1,4 +1,7 @@
 .instance {
+  box-sizing: border-box;
+  padding-top: 27px;
+  min-height: 705px;
   background-color: $alternative-background-color;
 }
 
@@ -20,6 +23,7 @@
 .instance__title {
   @include alternative-font;
   margin: 0;
+  margin-bottom: 33px;
   font-weight: normal;
   font-size: 36px;
   line-height: 40px;
@@ -36,6 +40,8 @@
 
 .instance__text {
   margin: 0;
+  margin-bottom: 25px;
+  word-spacing: -1px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 3;
@@ -48,15 +54,28 @@
 
 .instance__list {
   display: flex;
+  justify-content: space-between;
   margin: 0;
+  margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
   }
 }
 
+.instance__item {
+  position: relative;
+}
+
 .instance__purpose {
   @include alternative-font;
+  box-sizing: border-box;
+  padding-top: 13px;
+  border: 1px solid $owner-input-border-color;
+  border-radius: 3px;
+  min-width: 124px;
+  min-height: 56px;
+  text-align: center;
   text-transform: uppercase;
   font-size: 24px;
   line-height: 24px;
@@ -64,13 +83,23 @@
 }
 
 .instance__description {
+  position: absolute;
+  top: 49px;
+  left: 18px;
+  z-index: 1;
   margin: 0;
+  width: 85px;
+  text-align: center;
   font-size: 12px;
   line-height: 12px;
+  background-color: $alternative-background-color;
 }
 
 .instance__lead {
   @include alternative-font;
+  display: block;
+  margin-bottom: 41px;
+  text-align: center;
   text-transform: uppercase;
   font-weight: normal;
   line-height: 20px;
@@ -82,6 +111,10 @@
 }
 
 .instance__picture-list {
+  margin: 0;
+  margin-bottom: 28px;
+  padding: 0;
+  list-style: none;
   text-align: center;
 
   @media (min-width: $tablet-width) {
@@ -93,6 +126,16 @@
     grid-column: 2 / 3;
     grid-row: 1 / 4;
   }
+}
+
+
+.instance__picture-item {
+  margin-left: - (20 / 280) * 100%;
+  overflow: hidden;
+}
+
+.instance__picture-image {
+  max-width: initial;
 }
 
 .instance__toggles {

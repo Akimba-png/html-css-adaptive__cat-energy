@@ -72,13 +72,16 @@ a {
 
 // Paddings
 @mixin mobile-padding {
-  padding: 0 $mobile-indent;
+  padding-left: $mobile-indent;
+  padding-right: $mobile-indent;
 }
 
 @mixin tablet-padding {
-  padding: 0 $tablet-indent;
+  padding-left: $tablet-indent;
+  padding-right: $tablet-indent;
 }
 
 @mixin desktop-padding {
-  padding: 0 $desktop-indent;
+  padding-left: $desktop-indent;
+  padding-right: $desktop-indent;
 }

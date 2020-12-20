@@ -1,11 +1,34 @@
 .references {
+  box-sizing: border-box;
+  min-height: 236px;
   background-color: $background-color;
 }
 
 .references__wrapper {
   @include mobile-padding;
+  position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding-top: 39px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 94px;
+    left: $mobile-indent;
+    right: $mobile-indent;
+    border-bottom: 1px solid $dividing-line-color;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 157px;
+    left: $mobile-indent;
+    right: $mobile-indent;
+    border-bottom: 1px solid $dividing-line-color;
+  }
 
   @media (min-width: $tablet-width) {
     @include tablet-padding;
@@ -20,19 +43,18 @@
 }
 
 .references__logo {
+  margin-bottom: 27px;
   text-align: center;
 }
 
 .references__social-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   margin: 0;
+  margin-left: -4px;
   padding: 0;
-  border-top: 1px solid $dividing-line-color;
-  border-bottom: 1px solid $dividing-line-color;
+  padding-top: 21px;
+  width: (130 / 280) * 100%;
   list-style: none;
-
-  @media (min-width: $tablet-width) {
-    border: none;
-  }
 }

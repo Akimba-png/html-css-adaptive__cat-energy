@@ -1,3 +1,10 @@
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 190px;
+}
+
 .logo__img {
   display: block;
 
@@ -12,3 +19,10 @@
   }
 }
 
+.logo__text {
+  padding-top: 5px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}

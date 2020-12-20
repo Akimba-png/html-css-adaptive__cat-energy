@@ -1,7 +1,12 @@
 .promo {
   @include alternative-font;
   position: relative;
+  margin-bottom: 22px;
   color: $icon-content-color;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: -3px;
+  }
 
   @media (min-width: $desktop-width) {
     position: initial;
@@ -28,15 +33,37 @@
       background-color: rgba($main-color, 0.85);
     }
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 100%;
+    min-height: 302px;
+    background-image: url("../img/promo-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-background@2x.jpg");
+    }
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
 }
 
 .promo__wrapper {
-  display: grid;
-
   @include mobile-padding;
+  display: grid;
+  padding-top: 26px;
 
   @media (min-width: $tablet-width) {
     @include tablet-padding;
+    padding-top: 47px;
   }
 
   @media (min-width: $desktop-width) {
@@ -46,13 +73,17 @@
 
 .promo__title {
   margin: 0;
+  margin-bottom: 26px;
   text-align: center;
   font-weight: normal;
   font-size: 36px;
   line-height: 36px;
 
   @media (min-width: $tablet-width) {
-    margin-left: 12%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-bottom: 43px;
+    margin-left: 12.3%;
     width: 59%;
     text-align: left;
     font-size: 60px;
@@ -61,8 +92,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
     margin-left: 6.5%;
     width: 34%;
   }
@@ -70,20 +99,21 @@
 
 .promo__slogan {
   margin: 0;
+  margin-bottom: 29px;
   text-align: center;
   text-transform: uppercase;
   line-height: 14px;
 
   @media (min-width: $tablet-width) {
-    margin-left: 12%;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    margin-left: 12.3%;
     text-align: left;
     font-size: 20px;
     line-height: 20px;
     color: $title-color;
 
     @media (min-width: $desktop-width) {
-      grid-column: 1 / 2;
-      grid-row: 2 / 3;
       margin-left: 6.5%;
     }
   }
@@ -91,15 +121,22 @@
 
 .promo__link {
   order: 4;
+  min-height: 40px;
+  box-sizing: border-box;
+  padding-top: 10px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    margin-top: 40px;
-    margin-left: 12%;
-    width: 35%;
-    height: 30px;
-    text-align: left;
+    box-sizing: border-box;
+    margin-top: 19px;
+    margin-left: 11.6%;
+    padding-top: 17px;
+    width: 34.5%;
+    height: 54px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -107,16 +144,29 @@
   }
 }
 
-.promo__image {
-  display: block;
+
+.promo__image-wrapper {
   margin: 0 auto;
+  margin-bottom: 3px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
-    grid-row: 3 / 5;
+    grid-row: 3 / 4;
+    z-index: -1;
+    margin-top: - 10px;
   }
 
   @media (min-width: $desktop-width) {
     grid-row: 1 / 4;
+    z-index: 0;
+  }
+}
+
+.promo__image {
+  display: block;
+
+  @media (min-width: 768px) {
+    width: 709px;
+    height: 609px;
   }
 }
