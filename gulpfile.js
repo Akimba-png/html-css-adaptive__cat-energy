@@ -4,7 +4,18 @@ const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+const svgstore = require("gulp-svgstore");
 const sync = require("browser-sync").create();
+
+//Sprite
+
+const sprite = () => {
+  return gulp.src("source/img/icons/*.svg")
+    .pipe(svgstore())
+    .pipe(gulp.dest("source/img/icons"))
+}
+
+exports.sprite = sprite;
 
 // Styles
 

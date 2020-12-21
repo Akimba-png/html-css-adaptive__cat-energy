@@ -28,6 +28,27 @@
   @media (min-width: $desktop-width) {
     @include desktop-padding;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 53px;
+    background-image: url("../img/icons/cat-sit.svg");
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 160px;
+    width: 50px;
+    height: 53px;
+    background-color: red;
+    background-image: url("../img/icons/icons.svg#cat-sit");
+  }
 }
 
 .page-header__logo {
