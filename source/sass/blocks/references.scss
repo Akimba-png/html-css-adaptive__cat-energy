@@ -45,6 +45,14 @@
 .references__logo {
   margin-bottom: 27px;
   text-align: center;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .references__social-list {
