@@ -1,5 +1,9 @@
 .features {
-  margin-bottom: 46px;
+  margin-bottom: 45px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .features__wrapper {
@@ -22,6 +26,12 @@
   font-size: 36px;
   line-height: 40px;
   color: $title-color;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .features__list {
@@ -40,34 +50,84 @@
 .features__item {
   position: relative;
 
-  &:not(:last-child) {
-    margin-bottom: 26px;
+  @media (max-width: $mobile-only) {
+    &:not(:last-child) {
+      margin-bottom: 26px;
+    }
   }
 
   &::before {
     content: "";
     position: absolute;
-    top: -2px;
-    left: 0;
-    width: 60px;
-    height: 60px;
+    top: 11px;
+    left: 7px;
+    z-index: 1;
+    width: 45px;
+    height: 35px;
     background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 64px;
+      left: 17px;
+    }
   }
 
   &--nutrients::before {
-    background-image: url("../img/icon-nutrients.svg");
+    background-image: url("../img/icons/sprite.svg#icon-nutrients");
   }
 
   &--substance::before {
-    background-image: url("../img/icon-substance.svg");
+    background-image: url("../img/icons/sprite.svg#icon-substance");
   }
 
   &--meal::before {
-    background-image: url("../img/icon-meal.svg");
+    background-image: url("../img/icons/sprite.svg#icon-meal");
   }
 
   &--profit::before {
-    background-image: url("../img/icon-profit.svg");
+    background-image: url("../img/icons/sprite.svg#icon-profit");
+  }
+
+  @media (min-width: $tablet-width) {
+    box-sizing: border-box;
+    margin-bottom: 37px;
+    padding-top: 152px;
+    width: (249 / 708) * 100%;
+    min-height: 280px;
+
+    &:nth-child(2n-1) {
+      margin-right: (135 / 708) * 100%;
+    }
+
+    &::after {
+      @include alternative-font;
+      position: absolute;
+      top: 0;
+      left: (119 / 249) * 100%;
+      z-index: -1;
+      font-size: 280px;
+      line-height: 280px;
+      color: $background-color;
+    }
+
+    &--nutrients::after {
+      content: "1";
+    }
+
+    &--substance::after {
+      content: "2";
+      left: (111 / 249) * 100%;
+    }
+
+    &--meal::after {
+      content: "3";
+      left: (114 / 249) * 100%;
+    }
+
+    &--profit::after {
+      content: "4";
+      left: (114 / 249) * 100%;
+    }
   }
 }
 
@@ -75,4 +135,27 @@
   margin: 0;
   margin-left: auto;
   width: (200 / 280) * 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $main-color;
+
+    @media (min-width: $tablet-width) {
+      top: 41px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

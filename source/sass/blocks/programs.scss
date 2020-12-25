@@ -1,5 +1,9 @@
 .programs {
-  margin-bottom: 26px;
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 44px;
+  }
 }
 
 .programs__wrapper {
@@ -44,18 +48,18 @@
     content: "";
     position: absolute;
     top: 21px;
-    left: 29px;
+    left: 12px;
     z-index: 1;
-    width: 36px;
+    width: 70px;
     height: 50px;
     background-image: url("../img/icons/sprite.svg#cat-slim");
-    // background-repeat: no-repeat;
+    background-repeat: no-repeat;
 
     @media (min-width: $tablet-width) {
       left: initial;
       top: 81px;
-      right: 91px;
-      width: 140px;
+      right: 26px;
+      width: 270px;
       height: 192px;
     }
   }
@@ -82,13 +86,40 @@
   &--fit::before {
     content: "";
     position: absolute;
-    top: 24px;
+    top: 25px;
     left: 13px;
     z-index: 1;
     width: 68px;
-    height: 29px;
+    height: 48px;
     background-image: url("../img/icons/sprite.svg#cat-fit");
     background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      left: initial;
+      top: 95px;
+      right: 26px;
+      width: 270px;
+      height: 192px;
+    }
+  }
+
+  &--fit::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 22px;
+    width: 50px;
+    height: 50px;
+    background-color: $main-color;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      left: initial;
+      top: 91px;
+      right: 60px;
+      width: 200px;
+      height: 200px;
+    }
   }
 }
 
@@ -123,18 +154,28 @@
   margin: 0;
   margin-bottom: 20px;
   padding-bottom: 22px;
+  padding-right: 1px;
   border-bottom: 1px solid $dividing-line-color;
 
   @media (min-width: $tablet-width) {
-    outline: 1px solid red;
+    margin-bottom: 30px;
+    width: (405 / 708) * 100%;
+    border: none;
     font-size: 16px;
     line-height: 24px;
-    width: (405 / 708) * 100%;
+  }
+
+  &--fit {
+    @media (min-width: $tablet-width) {
+      width: 52%;
+    }
   }
 }
 
 .programs__link {
   @include alternative-font;
+  position: relative;
+  padding-right: 45px;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
@@ -144,8 +185,24 @@
     opacity: 0.3;
   }
 
-  &-img {
-    padding-left: 15px;
-    padding-bottom: 2px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 4px;
+    width: 24px;
+    height: 18px;
+    background-image: url("../img/icons/sprite.svg#arrow");
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 6px;
+      right: -4px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }

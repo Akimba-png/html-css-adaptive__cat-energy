@@ -66,3 +66,29 @@
   width: (130 / 280) * 100%;
   list-style: none;
 }
+
+.references__social-link {
+  color: $icons-color;
+
+  &:hover {
+    color: $main-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyrights__link {
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--logo {
+    color: $icons-color;
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
