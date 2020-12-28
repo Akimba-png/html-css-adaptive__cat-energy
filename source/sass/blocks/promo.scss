@@ -10,6 +10,7 @@
 
   @media (min-width: $desktop-width) {
     position: initial;
+    margin-bottom: 133px;
   }
 
   &::before {
@@ -28,8 +29,8 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 59%;
-      height: 200px;
+      width: 50%;
+      height: 694px;
       background-color: rgba($main-color, 0.85);
     }
   }
@@ -53,12 +54,25 @@
     @media (min-width: $tablet-width) {
       display: none;
     }
+
+    @media (min-width: $desktop-width) {
+      display: initial;
+      background-image: url("../img/promo-background-desktop.jpg");
+      left: 50%;
+      width: 50%;
+      min-height: 694px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo-background-desktop@2x.jpg");
+      }
+    }
   }
 }
 
 .promo__wrapper {
   @include mobile-padding;
   display: grid;
+  grid-template-rows: repeat(3, min-content) 1fr;
   padding-top: 26px;
 
   @media (min-width: $tablet-width) {
@@ -68,6 +82,7 @@
 
   @media (min-width: $desktop-width) {
     @include desktop-padding;
+    padding-top: 0;
   }
 }
 
@@ -92,7 +107,10 @@
   }
 
   @media (min-width: $desktop-width) {
+    box-sizing: border-box;
     margin-left: 6.5%;
+    margin-bottom: 41px;
+    padding-top: 95px;
     width: 34%;
   }
 }
@@ -115,6 +133,7 @@
 
     @media (min-width: $desktop-width) {
       margin-left: 6.5%;
+      margin-bottom: 33px;
     }
   }
 }
@@ -140,7 +159,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 6.5%;
+    margin-left: 6.55%;
+    width: 20%;
   }
 }
 
@@ -157,16 +177,23 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-row: 1 / 4;
+    grid-row: 1 / 5;
     z-index: 0;
+    margin-top: 14px;
+    margin-left: 36.7%;
   }
 }
 
 .promo__image {
   display: block;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: 709px;
     height: 609px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 552px;
+    height: 499px;
   }
 }

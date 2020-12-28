@@ -2,15 +2,37 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 39px;
+  padding-top: 40px;
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    width: 23.2%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 9px;
+    width: 13.4%;
+  }
 }
 
 .copyrights__link {
   font-size: 16px;
   line-height: 18px;
 
+  &:active {
+    opacity: 0.3;
+  }
+
   &--text {
     padding-bottom: 4px;
+  }
+
+  &--logo {
+    color: $icons-color;
+
+    &:hover {
+      color: $main-color;
+    }
   }
 }

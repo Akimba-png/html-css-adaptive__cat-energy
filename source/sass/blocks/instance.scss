@@ -20,7 +20,9 @@
     border-top: 1px solid $navigation-border-line;
   }
 
-
+  @media (min-width: $desktop-width) {
+    border: none;
+  }
 }
 
 .instance__wrapper {
@@ -34,13 +36,15 @@
     padding-top: 43px;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(3, min-content) 1fr min-content;
+    grid-template-rows: repeat(5, min-content);
     min-height: 1081px;
   }
 
   @media (min-width: $desktop-width) {
     @include desktop-padding;
     grid-template-columns: 1fr 1fr;
+    padding-top: 60px;
+    min-height: 658px;
   }
 }
 
@@ -62,6 +66,7 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
+    margin-bottom: 147px;
   }
 }
 
@@ -73,7 +78,7 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / 3;
     margin-bottom: 52px;
-    width: 98%;
+    width: 99%;
     font-size: 16px;
     line-height: 24px;
     word-spacing: initial;
@@ -81,6 +86,8 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
+    margin-bottom: 68px;
+    width: 77%;
   }
 }
 
@@ -93,7 +100,12 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    width: (364 / 470) * 100%
+    width: (364 / 470) * 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 56px;
+    width: (392 / 610) * 100%;
   }
 }
 
@@ -149,6 +161,10 @@
       width: 115px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    background-color: $alternative-background-color;
+  }
 }
 
 .instance__lead {
@@ -171,88 +187,104 @@
     font-size: 20px;
     line-height: 28px;
   }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+    text-align: left;
+    padding: 0;
+  }
+}
+
+.instance__ammount {
+  @media (min-width: $desktop-width) {
+    margin-left: (59 / 570) * 100%;
+  }
 }
 
 .instance__picture-list {
-  margin: 0;
+  position: relative;
+  margin: 0 auto;
   margin-bottom: 22px;
   padding: 0;
+  width: 311px;
   min-height: 242px;
   list-style: none;
-  text-align: center;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 3;
     grid-row: 4 / 6;
-    text-align: center;
-    outline: 3px solid orange;
+    margin-bottom: 45px;
+    width: 677px;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 2 / 3;
-    grid-row: 1 / 4;
+    grid-row: 1 / 6;
+    margin: 0;
+    margin-right: -27px;
+    margin-top: -104px;
   }
 }
 
-
 .instance__picture-item {
-  overflow: hidden;
-  outline: 1px solid red;
-  display: flex;
-  justify-content: center;
-
   &--before {
-    margin-left: - (20 / 280) * 100%;
+    margin-left: - (18 / 280) * 100%;
+    width: 100%;
 
     @media (min-width: $tablet-width) {
-      // margin: 0 auto;
-      padding-top: 48px;
-
-
       margin: 0;
+      padding-top: 48px;
+      width: 50%;
+    }
 
+    @media (min-width: $desktop-width) {
+      width: 53.9%;
     }
   }
 
   &--after {
-    margin-left: (16.6 / 280) * 100%;
-    padding-top: 2px;
+    position: absolute;
+    top: 2px;
+    right: 43px;
+    z-index: -1;
+    width: 0;
 
     @media (min-width: $tablet-width) {
-      margin-left: 6.929%;
-      padding: 0;
-
+      top: 48px;
+      right: 41px;
+      width: (298 / 677) * 100%;
     }
 
-
+    @media (min-width: $desktop-width) {
+      top: 47px;
+      width: (271 / 677) * 100%;
+    }
   }
-
-
-
-
-
 }
 
 .instance__picture-image {
   display: block;
-  // margin: 0 auto;
-
+  width: 100%;
   max-width: initial;
   object-fit: cover;
-  object-position: left;
 
   &--before {
+    height: 232px;
+    object-position: left;
+
     @media (min-width: $tablet-width) {
-      outline: 1px solid blue;
-      width: 677px;
       height: 520px;
     }
   }
 
   &--after {
+    width: 100%;
+    height: 240px;
+    object-position: right;
+
     @media (min-width: $tablet-width) {
-      padding-top: 49px;
-      width: 545px;
+      width: 100%;
       height: 520px;
     }
   }
@@ -270,5 +302,9 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 2 / 3;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 4 / 5;
   }
 }

@@ -28,7 +28,7 @@
   color: $title-color;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 32px;;
+    margin-bottom: 32px;
     font-size: 60px;
     line-height: 60px;
   }
@@ -44,6 +44,10 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
   }
 }
 
@@ -127,6 +131,15 @@
     &--profit::after {
       content: "4";
       left: (114 / 249) * 100%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    width: (245 / 1220) * 100%;
+
+    &:nth-child(2n-1) {
+      margin-right: 0;
     }
   }
 }

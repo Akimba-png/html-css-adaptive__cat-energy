@@ -4,6 +4,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 44px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
 }
 
 .programs__wrapper {
@@ -26,6 +30,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -42,6 +47,12 @@
     padding-top: 76px;
     padding-left: (52 / 708) * 100%;
     min-height: 372px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: (22 / 518) * 100%;
+    width: (570 / 1220) * 100%;
+    min-height: 374px;
   }
 
   &--slim::before {
@@ -62,6 +73,13 @@
       width: 270px;
       height: 192px;
     }
+
+    @media (min-width: $desktop-width) {
+      top: 41px;
+      right: initial;
+      left: 34px;
+      width: 136px;
+    }
   }
 
   &--slim::after {
@@ -80,6 +98,14 @@
       right: 62px;
       width: 200px;
       height: 200px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: initial;
+      top: 47px;
+      left: 52px;
+      width: 100px;
+      height: 100px;
     }
   }
 
@@ -101,6 +127,13 @@
       width: 270px;
       height: 192px;
     }
+
+    @media (min-width: $desktop-width) {
+      top: 47px;
+      right: initial;
+      left: 33px;
+      width: 134px;
+    }
   }
 
   &--fit::after {
@@ -120,6 +153,14 @@
       width: 200px;
       height: 200px;
     }
+
+    @media (min-width: $desktop-width) {
+      right: initial;
+      top: 47px;
+      left: 52px;
+      width: 100px;
+      height: 100px;
+    }
   }
 }
 
@@ -128,6 +169,10 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -148,6 +193,11 @@
     font-size: 36px;
     line-height: 36px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-left: (162 / 518) * 100%;
+    margin-bottom: 73px;
+  }
 }
 
 .programs__feature {
@@ -165,10 +215,18 @@
     line-height: 24px;
   }
 
+  @media (min-width: $desktop-width) {
+    margin-bottom: 6px;
+  }
+
   &--fit {
     @media (min-width: $tablet-width) {
       width: 52%;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 90%;
   }
 }
 
@@ -198,6 +256,10 @@
     @media (min-width: $tablet-width) {
       top: 6px;
       right: -4px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -6px;
     }
   }
 

@@ -1,6 +1,4 @@
 .references {
-  box-sizing: border-box;
-  min-height: 236px;
   background-color: $background-color;
 }
 
@@ -9,31 +7,37 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  box-sizing: border-box;
   padding-top: 39px;
+  min-height: 236px;
+  align-items: center;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 94px;
-    left: $mobile-indent;
-    right: $mobile-indent;
-    border-bottom: 1px solid $dividing-line-color;
-  }
+  @media (max-width: $mobile-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 94px;
+      left: $mobile-indent;
+      right: $mobile-indent;
+      border-bottom: 1px solid $dividing-line-color;
+    }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 157px;
-    left: $mobile-indent;
-    right: $mobile-indent;
-    border-bottom: 1px solid $dividing-line-color;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 157px;
+      left: $mobile-indent;
+      right: $mobile-indent;
+      border-bottom: 1px solid $dividing-line-color;
+    }
   }
 
   @media (min-width: $tablet-width) {
     @include tablet-padding;
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 0;
+    min-height: 146px;
     align-items: center;
   }
 
@@ -53,6 +57,15 @@
   &:active {
     opacity: 0.6;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-top: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 7px;
+  }
 }
 
 .references__social-list {
@@ -60,14 +73,27 @@
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  margin-left: -4px;
+  margin-left: -8px;
   padding: 0;
-  padding-top: 21px;
-  width: (130 / 280) * 100%;
+  padding-top: 22px;
+  width: (127 / 280) * 100%;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    margin-left: (25 / 768) * 100%;
+    padding-top: 0;
+    width: (49 / 280) * 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: (23 / 1220) * 100%;
+    padding-top: 5px;
+    width: 10.5%;
+  }
 }
 
 .references__social-link {
+  display: block;
   color: $icons-color;
 
   &:hover {
@@ -77,18 +103,25 @@
   &:active {
     opacity: 0.3;
   }
-}
 
-.copyrights__link {
-  &:active {
-    opacity: 0.3;
-  }
+  @media (min-width: $tablet-width) {
+    &--vk {
+      margin-top: -4px;
+      width: 30px;
+    }
 
-  &--logo {
-    color: $icons-color;
+    &--instagram {
+      margin-top: -1px;
+      width: 23px;
+    }
 
-    &:hover {
-      color: $main-color;
+    &--facebook {
+      width: 19px;
     }
   }
+}
+
+.references__social-image {
+  width: 100%;
+  height: auto;
 }
