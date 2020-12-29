@@ -44,6 +44,7 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
+    counter-reset: number;
   }
 
   @media (min-width: $desktop-width) {
@@ -53,6 +54,7 @@
 
 .features__item {
   position: relative;
+
 
   @media (max-width: $mobile-only) {
     &:not(:last-child) {
@@ -112,24 +114,19 @@
       font-size: 280px;
       line-height: 280px;
       color: $background-color;
-    }
-
-    &--nutrients::after {
-      content: "1";
+      counter-increment: number;
+      content: counter(number);
     }
 
     &--substance::after {
-      content: "2";
       left: (111 / 249) * 100%;
     }
 
     &--meal::after {
-      content: "3";
       left: (114 / 249) * 100%;
     }
 
     &--profit::after {
-      content: "4";
       left: (114 / 249) * 100%;
     }
   }
