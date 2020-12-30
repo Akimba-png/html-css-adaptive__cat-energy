@@ -1,6 +1,5 @@
 .form {
   @include alternative-font;
-  border-top: 1px solid $dividing-line-color;
   text-transform: uppercase;
   font-size: 16px;
 
@@ -18,6 +17,8 @@
 
 .form__wrapper {
   @include mobile-padding;
+  margin-bottom: 40px;
+  padding-top: 26px;
 
   @media (min-width: $tablet-width) {
     @include tablet-padding;
@@ -31,16 +32,29 @@
 
 .form__title {
   margin: 0;
+  margin-bottom: 37px;
   text-transform: none;
   font-weight: normal;
   font-size: 36px;
   line-height: 36px;
   color: $title-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .form__text {
   margin: 0;
+  width: 95%;
+  font-size: 14px;
   color: $title-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__cat-info {

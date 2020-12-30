@@ -1,10 +1,16 @@
 .promo {
   @include alternative-font;
   position: relative;
+  margin-bottom: 22px;
   color: $icon-content-color;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: -3px;
+  }
 
   @media (min-width: $desktop-width) {
     position: initial;
+    margin-bottom: 133px;
   }
 
   &::before {
@@ -23,36 +29,76 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 59%;
-      height: 200px;
+      width: 50%;
+      height: 694px;
       background-color: rgba($main-color, 0.85);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 100%;
+    min-height: 302px;
+    background-image: url("../img/promo-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-background@2x.jpg");
+    }
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: initial;
+      background-image: url("../img/promo-background-desktop.jpg");
+      left: 50%;
+      width: 50%;
+      min-height: 694px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo-background-desktop@2x.jpg");
+      }
     }
   }
 }
 
 .promo__wrapper {
-  display: grid;
-
   @include mobile-padding;
+  display: grid;
+  grid-template-rows: repeat(3, min-content) 1fr;
+  padding-top: 26px;
 
   @media (min-width: $tablet-width) {
     @include tablet-padding;
+    padding-top: 47px;
   }
 
   @media (min-width: $desktop-width) {
     @include desktop-padding;
+    padding-top: 0;
   }
 }
 
 .promo__title {
   margin: 0;
+  margin-bottom: 26px;
   text-align: center;
   font-weight: normal;
   font-size: 36px;
   line-height: 36px;
 
   @media (min-width: $tablet-width) {
-    margin-left: 12%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-bottom: 43px;
+    margin-left: 12.3%;
     width: 59%;
     text-align: left;
     font-size: 60px;
@@ -61,62 +107,93 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    box-sizing: border-box;
     margin-left: 6.5%;
+    margin-bottom: 41px;
+    padding-top: 95px;
     width: 34%;
   }
 }
 
 .promo__slogan {
   margin: 0;
+  margin-bottom: 29px;
   text-align: center;
   text-transform: uppercase;
   line-height: 14px;
 
   @media (min-width: $tablet-width) {
-    margin-left: 12%;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    margin-left: 12.3%;
     text-align: left;
     font-size: 20px;
     line-height: 20px;
     color: $title-color;
 
     @media (min-width: $desktop-width) {
-      grid-column: 1 / 2;
-      grid-row: 2 / 3;
       margin-left: 6.5%;
+      margin-bottom: 33px;
     }
   }
 }
 
 .promo__link {
   order: 4;
+  min-height: 40px;
+  box-sizing: border-box;
+  padding-top: 10px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    margin-top: 40px;
-    margin-left: 12%;
-    width: 35%;
-    height: 30px;
-    text-align: left;
+    box-sizing: border-box;
+    margin-top: 19px;
+    margin-left: 11.6%;
+    padding-top: 17px;
+    width: 34.5%;
+    height: 54px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 6.5%;
+    margin-left: 6.55%;
+    width: 20%;
+  }
+}
+
+
+.promo__image-wrapper {
+  margin: 0 auto;
+  margin-bottom: 3px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    z-index: -1;
+    margin-top: - 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 1 / 5;
+    z-index: 0;
+    margin-top: 14px;
+    margin-left: 36.7%;
   }
 }
 
 .promo__image {
   display: block;
-  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    grid-column: 1 / 2;
-    grid-row: 3 / 5;
+    width: 709px;
+    height: 609px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-row: 1 / 4;
+    width: 552px;
+    height: 499px;
   }
 }

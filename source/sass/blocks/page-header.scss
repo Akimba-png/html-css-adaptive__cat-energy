@@ -1,11 +1,13 @@
 .page-header {
   @include alternative-font;
+  border-bottom: 1px solid $navigation-border-line;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
 
   @media (min-width: $tablet-width) {
+    border-bottom: none;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
@@ -18,22 +20,30 @@
 }
 
 .page-header__wrapper {
+  padding-top: 11px;
+
   @media (min-width: $tablet-width) {
+    @include tablet-padding;
     display: flex;
     justify-content: space-between;
-
-    @include tablet-padding;
+    padding-top: 20px;
   }
 
   @media (min-width: $desktop-width) {
     @include desktop-padding;
+    padding-top: 48px;
   }
 }
 
 .page-header__logo {
   display: block;
+  margin-bottom: 16px;
 
   @media (max-width: $mobile-only) {
     @include mobile-padding;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 4px;
   }
 }

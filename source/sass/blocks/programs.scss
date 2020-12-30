@@ -1,3 +1,15 @@
+.programs {
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
+}
+
 .programs__wrapper {
   @include mobile-padding;
 
@@ -17,29 +29,211 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
 .programs__item {
+  @include mobile-padding;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 29px;
+  min-height: 266px;
   background-color: $background-color;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    padding-top: 76px;
+    padding-left: (52 / 708) * 100%;
+    min-height: 372px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: (22 / 518) * 100%;
+    width: (570 / 1220) * 100%;
+    min-height: 374px;
+  }
+
+  &--slim::before {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 12px;
+    z-index: 1;
+    width: 70px;
+    height: 50px;
+    background-image: url("../img/icons/sprite.svg#cat-slim");
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      left: initial;
+      top: 81px;
+      right: 26px;
+      width: 270px;
+      height: 192px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 41px;
+      right: initial;
+      left: 34px;
+      width: 136px;
+    }
+  }
+
+  &--slim::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 22px;
+    width: 50px;
+    height: 50px;
+    background-color: $main-color;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      left: initial;
+      top: 92px;
+      right: 62px;
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: initial;
+      top: 47px;
+      left: 52px;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &--fit::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 13px;
+    z-index: 1;
+    width: 68px;
+    height: 48px;
+    background-image: url("../img/icons/sprite.svg#cat-fit");
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      left: initial;
+      top: 95px;
+      right: 26px;
+      width: 270px;
+      height: 192px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 47px;
+      right: initial;
+      left: 33px;
+      width: 134px;
+    }
+  }
+
+  &--fit::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 22px;
+    width: 50px;
+    height: 50px;
+    background-color: $main-color;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      left: initial;
+      top: 91px;
+      right: 60px;
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: initial;
+      top: 47px;
+      left: 52px;
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+.programs__item:not(:last-child) {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .programs__title {
   @include alternative-font;
   margin: 0;
+  margin-bottom: 30px;
+  margin-left: 30%;
   text-transform: uppercase;
   font-weight: normal;
   font-size: 24px;
   line-height: 37px;
   color: $title-color;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
+    margin-left: 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: (162 / 518) * 100%;
+    margin-bottom: 73px;
+  }
 }
 
 .programs__feature {
   margin: 0;
+  margin-bottom: 20px;
+  padding-bottom: 22px;
+  padding-right: 1px;
+  border-bottom: 1px solid $dividing-line-color;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+    width: (405 / 708) * 100%;
+    border: none;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 6px;
+  }
+
+  &--fit {
+    @media (min-width: $tablet-width) {
+      width: 52%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 90%;
+  }
 }
 
 .programs__link {
   @include alternative-font;
+  position: relative;
+  padding-right: 45px;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
@@ -47,5 +241,30 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 4px;
+    width: 24px;
+    height: 18px;
+    background-image: url("../img/icons/sprite.svg#arrow");
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 6px;
+      right: -4px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -6px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }

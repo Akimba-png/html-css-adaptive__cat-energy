@@ -1,11 +1,24 @@
-.slider {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.slider__toggles {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 71%;
+
+  @media (min-width: $tablet-width) {
+    width: 80.5%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-left: auto;
+    width: 87.7%;
+  }
 }
 
 .slider__toggle {
   @include alternative-font;
+  position: relative;
+  padding: 0;
   border: none;
   text-transform: uppercase;
   font-size: 16px;
@@ -13,4 +26,90 @@
   color: $title-color;
   background-color: transparent;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &--before {
+    @media (max-width: $mobile-only) {
+      padding-left: 4px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 2px;
+    width: 45px;
+    height: 1px;
+
+    @media (min-width: $tablet-width) {
+      background-image: linear-gradient(90deg, $toggle-border-color 1px, transparent 1px, transparent 2px);
+      background-size: 2px 1px;
+      background-repeat: repeat;
+    }
+  }
+
+  &:hover::before {
+    background-image: none;
+    background-color: $title-color;
+    opacity: 0.4;
+  }
+
+  &:active::before {
+    background-color: transparent;
+  }
+}
+
+.slider__range-scale {
+  display: flex;
+  justify-content: left;
+  position: relative;
+  align-self: center;
+  box-sizing: border-box;
+  padding: 3px 6px;
+  width: 42.5%;
+  height: 14px;
+  border: 1px solid $owner-input-border-color;
+  border-radius: 6px;
+  background-color: $icon-content-color;
+
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+    margin-left: 4px;
+    padding: 0;
+    width: 75.5%;
+    height: 6px;
+    border: none;
+    background-color: $range-background-color;
+  }
+}
+
+.slider__range-toggle {
+  width: 49%;
+  height: 6px;
+  border-radius: 6px;
+  background-color: $main-color;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: -13px;
+    left: 46.2%;
+    width: 8px;
+    height: 8px;
+    border: 12px solid $icon-content-color;
+    box-shadow: 0 0 0 1px $owner-input-border-color, 0 1px 3px 0 $range-shadow-color;
+    border-radius: 50%;
+
+    &:hover {
+      box-shadow: 0 0 0 1px $owner-input-border-color, 0 2px 4px 0 $range-hover-shadow-color;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 1px $main-color, 0 3px 5px 0 $range-active-shadow-color;
+    }
+  }
 }
