@@ -4,9 +4,24 @@ const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+const csso = require("postcss-csso");
+const rename = require("gulp-rename");
+const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgsprite = require("gulp-svg-sprite");
 const sync = require("browser-sync").create();
+
+// Image
+
+const optiImage = () => {
+  return gulp.src("source/img/*.{jpg,png,svg}")
+  .pipe(imagemin([
+    imagemin.mozjpeg({progressive: true}),
+    imagemin.optipng({optimizationLevel: 3}),
+    imagemin.svgo()
+  ]))
+  .pipe(gulp.dest())
+}
 
 // Webp
 
@@ -42,9 +57,11 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
     .pipe(sourcemap.write("."))
+    .pipe(rename("style.min.css"))
     .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
 }
