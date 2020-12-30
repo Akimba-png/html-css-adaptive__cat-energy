@@ -70,6 +70,13 @@ a {
   font-family: "Oswald", "Arial", sans-serif;
 }
 
+@mixin placeholder {
+  &::placeholder {
+    color: inherit;
+    opacity: 1;
+  }
+}
+
 // Paddings
 @mixin mobile-padding {
   padding-left: $mobile-indent;
@@ -85,3 +92,4 @@ a {
   padding-left: $desktop-indent;
   padding-right: $desktop-indent;
 }
+

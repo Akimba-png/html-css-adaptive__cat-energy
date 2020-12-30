@@ -4,8 +4,19 @@ const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+const webp = require("gulp-webp");
 const svgsprite = require("gulp-svg-sprite");
 const sync = require("browser-sync").create();
+
+// Webp
+
+const createWebp = () => {
+  return gulp.src("source/img/*.{jpg,png}")
+  .pipe(webp({quality: 90}))
+  .pipe(gulp.dest("source/img"));
+}
+
+exports.createWebp = createWebp;
 
 // Sprite
 
