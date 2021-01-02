@@ -9,6 +9,9 @@
 
 .purpose__wrapper {
   @include mobile-padding;
+  box-sizing: border-box;
+  padding-top: 29px;
+  min-height: 156px;
 
   @media (min-width: $tablet-width) {
     @include tablet-padding;
@@ -31,4 +34,49 @@
   @media (min-width: $tablet-width) {
     border: 1px solid $input-border-color;
   }
+}
+
+.purpose__item {
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  padding-left: 45px;
+}
+
+.purpose__label {
+  display: block;
+}
+
+.purpose__input + .purpose__label::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  border: 1px solid $owner-input-border-color;
+  border-radius: 50%;
+}
+
+.purpose__label:hover::before {
+  border-color: $hover-input-color;
+}
+
+.purpose__input:checked + .purpose__label::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 8px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: $main-color;
+}
+
+.purpose__input:disabled + .purpose__label {
+  opacity: 0.3;
+}
+
+.purpose__input:disabled + .purpose__label:hover::before {
+  border-color: $owner-input-border-color;
 }

@@ -1,5 +1,17 @@
 .addition {
+  position: relative;
+  margin-bottom: 17px;
   border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: (136 / 320) * 100%;
+    height: 2px;
+    background-color: $main-color;
+  }
 }
 
 .addition__wrapper {
@@ -16,6 +28,7 @@
 
 .addition__title {
   margin: 0;
+  margin-bottom: 40px;
   text-transform: none;
   font-weight: normal;
   font-size: 24px;
@@ -36,3 +49,47 @@
     flex-wrap: wrap;
   }
 }
+
+.addition__item {
+  position: relative;
+  margin-bottom: 24px;
+  padding-left: 45px;
+}
+
+
+.addition__input + .addition__label::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  border: 1px solid $owner-input-border-color;
+}
+
+.addition__input:checked + .addition__label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 7px;
+  width: 16px;
+  height: 9px;
+  border: 2px solid $main-color;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
+}
+
+.addition__label:hover::before {
+  border-color: $hover-input-color;
+}
+
+.addition__input:disabled + .addition__label {
+  opacity: 0.3;
+}
+
+.addition__input:disabled + .addition__label:hover::before {
+  border-color: $owner-input-border-color;
+}
+
+

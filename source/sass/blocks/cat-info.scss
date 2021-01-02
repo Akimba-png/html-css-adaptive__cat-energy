@@ -40,6 +40,7 @@
   font-size: 16px;
   line-height: 18px;
   color: $text-color;
+  box-shadow: none;
   appearance: textfield;
 
   &--grid {
@@ -55,6 +56,14 @@
   &:focus {
     border: 2px solid $text-color;
     outline: none;
+  }
+
+  &:invalid {
+    border: 2px solid $error-color;
+
+    &:placeholder-shown {
+      border: 1px solid $input-border-color;
+    }
   }
 
   &::-webkit-outer-spin-button {
