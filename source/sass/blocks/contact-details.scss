@@ -1,7 +1,6 @@
 .contact-details {
   position: relative;
   border: none;
-  margin-bottom: 10px;
 
   &::before {
     content: "";
@@ -11,6 +10,23 @@
     width: (99 / 320) * 100%;
     height: 2px;
     background-color: $main-color;
+
+    @media (min-width: $tablet-width) {
+      top: 48px;
+      width: (145 / 768) * 100%;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 48px;
+      left: 0;
+      width: (30 / 768) * 100%;
+      height: 2px;
+      background-color: $main-color;
+    }
   }
 }
 
@@ -19,7 +35,7 @@
   padding-top: 26px;
 
   @media (min-width: $tablet-width) {
-    @include tablet-padding;
+    @include tablet-form-padding;
   }
 
   @media (min-width: $desktop-width) {
@@ -36,6 +52,14 @@
   font-size: 24px;
   line-height: 26px;
   color: $title-color;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+    margin-left: -2px;
+    width: (540 / 630) * 100%;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .contact-details__list {
@@ -44,12 +68,28 @@
   list-style: none;
 }
 
+.contact-details__item {
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+
+    &--tel {
+      margin-left: -3px;
+    }
+  }
+}
+
 .contact-details__label {
   display: grid;
   grid-template-columns: auto auto 1fr;
   grid-template-rows: 38px auto;
   align-items: center;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    grid-template-rows: auto;
+  }
 }
 
 .contact-details__input {
@@ -57,7 +97,6 @@
   @include placeholder;
   grid-column: 3 / 4;
   grid-row: 1 / -1;
-  margin-bottom: 14px;
   box-sizing: border-box;
   margin-left: 12px;
   padding-left: 14px;
@@ -95,6 +134,18 @@
       }
     }
   }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 20px;
+    padding-left: 20px;
+    height: 52px;
+    font-size: 20px;
+    line-height: 30px;
+
+    &--tel {
+      margin-left: 17px;
+    }
+  }
 }
 
 .contact-details__img {
@@ -104,7 +155,16 @@
   color: $subtitle-color;
 
   &--tel {
-    top: 14px;
-    right: 14px;
+    top: 13px;
+    right: 13px;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 18px;
+    right: 16px;
+
+    &--tel {
+      top: 16px;
+    }
   }
 }

@@ -12,7 +12,7 @@
   min-height: 186px;
 
   @media (min-width: $tablet-width) {
-    @include tablet-padding;
+    @include tablet-form-padding;
   }
 
   @media (min-width: $desktop-width) {
@@ -25,6 +25,12 @@
   display: flex;
   margin-bottom: 14px;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .cat-info__input {
@@ -43,8 +49,7 @@
   box-shadow: none;
   appearance: textfield;
 
-  &--grid {
-    grid-column: 2 / 4;
+  &--age {
     width: 20%;
     flex-grow: 1;
   }
@@ -63,6 +68,14 @@
 
     &:placeholder-shown {
       border: 1px solid $input-border-color;
+
+      &:hover {
+        border: 1px solid $owner-input-border-color;
+      }
+
+      &:focus {
+        border: 2px solid $text-color;
+      }
     }
   }
 
@@ -74,5 +87,17 @@
   &::-webkit-inner-spin-button {
     appearance: none;
     margin: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 17px;
+    padding-left: 18px;
+    height: 52px;
+    font-size: 20px;
+    line-height: 30px;
+
+    &--weight {
+      margin-left: 21px;
+    }
   }
 }

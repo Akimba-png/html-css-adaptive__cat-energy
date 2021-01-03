@@ -14,7 +14,7 @@
   min-height: 156px;
 
   @media (min-width: $tablet-width) {
-    @include tablet-padding;
+    @include tablet-form-padding;
   }
 
   @media (min-width: $desktop-width) {
@@ -32,7 +32,13 @@
   color: $subtitle-color;
 
   @media (min-width: $tablet-width) {
+    box-sizing: border-box;
+    padding-top: 30px;
+    padding-left: 42px;
+    min-height: 196px;
     border: 1px solid $input-border-color;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
@@ -41,10 +47,14 @@
   box-sizing: border-box;
   margin-bottom: 25px;
   padding-left: 45px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 22px;
+  }
 }
 
 .purpose__label {
-  display: block;
+  cursor: pointer;
 }
 
 .purpose__input + .purpose__label::before {
@@ -56,6 +66,13 @@
   height: 28px;
   border: 1px solid $owner-input-border-color;
   border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    top: -6px;
+    left: -15px;
+    width: 38px;
+    height: 38px
+  }
 }
 
 .purpose__label:hover::before {
@@ -71,6 +88,13 @@
   height: 14px;
   border-radius: 50%;
   background-color: $main-color;
+
+  @media (min-width: $tablet-width) {
+    top: 5px;
+    left: -4px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .purpose__input:disabled + .purpose__label {

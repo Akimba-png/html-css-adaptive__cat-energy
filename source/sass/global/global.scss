@@ -88,6 +88,11 @@ a {
   padding-right: $tablet-indent;
 }
 
+@mixin tablet-form-padding {
+  padding-left: $tablet-form-left-indent;
+  padding-right: $tablet-form-right-indent;
+}
+
 @mixin desktop-padding {
   padding-left: $desktop-indent;
   padding-right: $desktop-indent;
