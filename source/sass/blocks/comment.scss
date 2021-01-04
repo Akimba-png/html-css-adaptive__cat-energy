@@ -10,15 +10,19 @@
     width: (158 / 320) * 100%;
     height: 2px;
     background-color: $main-color;
-  }
 
-  @media (min-width: $tablet-width) {
-    &::before {
+    @media (min-width: $tablet-width) {
       top: 22px;
       width: (479 / 768) * 100%;
     }
 
-    &::after {
+    @media (min-width: $desktop-width) {
+      width: (1108 / 1440) * 100%;
+    }
+  }
+
+  &::after {
+    @media(min-width: $tablet-width) {
       content: "";
       position: absolute;
       top: 22px;
@@ -27,8 +31,11 @@
       height: 2px;
       background-color: $main-color;
     }
-  }
 
+    @media (min-width: $desktop-width) {
+      width: (70 / 1440) * 100%;
+    }
+  }
 }
 
 .comment__wrapper {

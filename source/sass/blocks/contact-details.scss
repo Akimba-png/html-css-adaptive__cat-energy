@@ -15,10 +15,15 @@
       top: 48px;
       width: (145 / 768) * 100%;
     }
+
+    @media (min-width: $desktop-width) {
+      top: 42px;
+      width: (778 / 1440) * 100%;
+    }
   }
 
-  @media (min-width: $tablet-width) {
-    &::after {
+  &::after {
+    @media (min-width: $tablet-width) {
       content: "";
       position: absolute;
       top: 48px;
@@ -26,6 +31,11 @@
       width: (30 / 768) * 100%;
       height: 2px;
       background-color: $main-color;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 42px;
+      width: (70 / 1440) * 100%;
     }
   }
 }
@@ -40,6 +50,7 @@
 
   @media (min-width: $desktop-width) {
     @include desktop-padding;
+    padding-top: 19px;
   }
 }
 
@@ -60,12 +71,22 @@
     font-size: 36px;
     line-height: 36px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 77px;
+  }
 }
 
 .contact-details__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: (80 / 1220) * 100%;
+  }
 }
 
 .contact-details__item {
@@ -77,6 +98,10 @@
     &--tel {
       margin-left: -3px;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
   }
 }
 
@@ -144,6 +169,12 @@
 
     &--tel {
       margin-left: 17px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--tel {
+      padding-left: 17px;
     }
   }
 }

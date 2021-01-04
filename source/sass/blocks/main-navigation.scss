@@ -91,6 +91,20 @@
     display: none;
     border-top: 1px solid $navigation-border-line;
   }
+
+  &--inner {
+    color: $title-color;
+  }
+
+  &--inner .main-navigation__item-link--active {
+    @media (min-width: $tablet-width) {
+      box-shadow: 0 5px 0 0 $icon-content-color, 0 7px 0 0 $main-color;
+    }
+
+    @media (min-width: $desktop-width) {
+      box-shadow: 0 6px 0 0 $icon-content-color, 0 8px 0 0 $main-color;
+    }
+  }
 }
 
 .main-navigation__item-link {

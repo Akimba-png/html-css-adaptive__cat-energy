@@ -31,6 +31,7 @@
 
   @media (min-width: $desktop-width) {
     @include desktop-padding;
+    padding-top: 59px;
   }
 }
 
@@ -49,6 +50,10 @@
     font-size: 60px;
     line-height: 60px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 57px;
+  }
 }
 
 .form__text {
@@ -61,6 +66,10 @@
     width: 55%;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 29%;
   }
 }
 
@@ -101,6 +110,10 @@
     grid-column: 1 / 3;
     margin-bottom: 45px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 47px;
+  }
 }
 
 .form__comment {
@@ -112,14 +125,23 @@
     grid-column: 1 / 3;
     margin-bottom: 63px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 66px;
+  }
 }
 
 .form__addition {
   margin: 0;
+  margin-bottom: 17px;
   padding: 0;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 3;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
   }
 }
 
@@ -139,7 +161,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: (110 / 680) * 100%;
+    margin-left: (111 / 680) * 100%;
+    width: (566 / 678) * 100%;
   }
 }
 
@@ -154,6 +177,10 @@
   @media (min-width: $tablet-width) {
     padding-top: 14px;
     text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 16px;
   }
 }
 
