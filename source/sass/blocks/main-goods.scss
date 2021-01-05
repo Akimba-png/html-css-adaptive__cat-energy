@@ -7,6 +7,8 @@
 }
 
 .main-goods__wrapper {
+  box-sizing: border-box;
+  padding-top: 26px;
   @media (min-width: $tablet-width) {
     @include tablet-padding;
   }
@@ -20,6 +22,7 @@
   @include alternative-font;
   margin: 0;
   padding-left: $mobile-indent;
+  padding-bottom: 41px;
   border-bottom: 1px solid $main-goods-border-color;
   font-weight: normal;
   font-size: 36px;
