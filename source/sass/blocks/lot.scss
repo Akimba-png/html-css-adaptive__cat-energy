@@ -1,6 +1,10 @@
 .lot {
   position: relative;
+  min-height: 208px;
   border-bottom: 1px solid $main-goods-border-color;
+  box-sizing: border-box;
+  padding-top: 21px;
+  min-height: 209px;
 
   @media (min-width: $tablet-width) {
     width: 324px;
@@ -28,10 +32,15 @@
   @media (min-width: $desktop-width) {
     width: 245px;
   }
+
+  &--all {
+    min-height: 208px;
+  }
 }
 
 .lot__wrapper {
   @include mobile-padding;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
 
@@ -42,21 +51,52 @@
     padding: 0 37px;
     height: 100%;
   }
+
+  &--all {
+    box-sizing: border-box;
+    padding-top: 57px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 18px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 30px;
+      height: 2px;
+      background-color: $plus-color;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 2px;
+      height: 30px;
+      background-color: $plus-color;
+    }
+  }
 }
 
 .lot__link-title {
-  margin-bottom: 15px;
-}
+  margin-bottom: 13px;
+  width: (80 / 138) * 100%;
 
-.lot__link-title--all {
-  grid-column: 1 / 3;
-  text-align: center;
+  &--all {
+    grid-column: 1 / 3;
+    margin-bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .lot__title {
   @include alternative-font;
   margin: 0;
-  width: (80 / 138) * 100%;
   text-transform: uppercase;
   font-weight: normal;
   font-size: 16px;
@@ -66,14 +106,36 @@
 
 .lot__link-image {
   grid-column: 1 / 2;
-  grid-row: 1 / 3;
+  grid-row: 1 / 4;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding-top: 11px;
+
+  outline: 1px solid green;
+
+  @media (max-width: $mobile-only) {
+    &--third {
+      padding-top: 24px;
+    }
+
+    &--fifth {
+      padding-top: 28px;
+    }
+
+    &--seventh {
+      padding-top: 22px;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     order: -1;
   }
+}
+
+.lot__link-image img {
+  outline: 1px solid red;
 }
 
 .lot__properties {
@@ -100,6 +162,11 @@
 
 .lot__button {
   grid-column: 1 / 3;
+  grid-row: 3 / 4;
+  box-sizing: border-box;
+  margin-top: 22px;
+  padding-top: 10px;
+  min-height: 40px;
   font-size: 16px;
   line-height: 20px;
 
