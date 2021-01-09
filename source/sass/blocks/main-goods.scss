@@ -9,12 +9,15 @@
 .main-goods__wrapper {
   box-sizing: border-box;
   padding-top: 26px;
+
   @media (min-width: $tablet-width) {
     @include tablet-padding;
+    padding-top: 48px;
   }
 
   @media (min-width: $desktop-width) {
     @include desktop-padding;
+    outline: 1px solid red;
   }
 }
 
@@ -30,8 +33,11 @@
   color: $title-color;
 
   @media (min-width: $tablet-width) {
-    border: none;
+    margin-bottom: 84px;
     padding: 0;
+    border: none;
+    font-size: 60px;
+    line-height: 60px;
   }
 }
 
@@ -45,10 +51,13 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     gap: (60 / 708) * 100%;
   }
 
   @media (min-width: $desktop-width) {
     gap: (80 / 1220) * 100%;
+
+    outline: 1px solid green;
   }
 }

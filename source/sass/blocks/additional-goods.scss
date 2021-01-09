@@ -9,6 +9,23 @@
     width: (53 / 320) * 100%;
     height: 2px;
     background-color: $main-color;
+
+    @media (min-width: $tablet-width) {
+      top: 22px;
+      width: (328 / 768) * 100%;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 0;
+    width: (30 / 768) * 100%;
+    height: 2px;
+    background-color: $main-color;
+    }
   }
 }
 
@@ -18,6 +35,7 @@
 
   @media (min-width: $tablet-width) {
     @include tablet-padding;
+    padding-top: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -37,6 +55,13 @@
   line-height: 24px;
   color: $title-color;
 
+  @media (min-width: $tablet-width) {
+    margin-left: (40 / 768) * 100%;
+    margin-bottom: 81px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
   @media (min-width: $desktop-width) {
     width: 100%;
   }
@@ -50,6 +75,7 @@
   list-style: none;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 69px;
     border-left: 1px solid $owner-input-border-color;
     border-right: 1px solid $owner-input-border-color;
   }
@@ -69,8 +95,9 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
-    padding-left: (38 / 708) * 100%;
-    padding-right: (38 / 708) * 100%;
+    padding-top: 24px;
+    padding-left: (37 / 708) * 100%;
+    padding-right: (37 / 708) * 100%;
   }
 
   @media (min-width: $desktop-width) {
@@ -88,6 +115,13 @@
   font-size: 16px;
   line-height: 16px;
   color: $subtitle-color;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 2px;
+    padding-left: (1 / 316) * 100%;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .additional-goods__properties {
@@ -95,10 +129,26 @@
   justify-content: space-between;
   margin-bottom: 15px;
   line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: right;
+    column-gap: (48 / 315) * 100%;
+    margin-left: auto;
+    margin-bottom: 23px;
+    padding-top: 5px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .additional-goods__definition {
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    min-width: 45px;
+    text-align: right;
+  }
 
   &--uppercase {
     text-transform: uppercase;
@@ -115,10 +165,24 @@
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 3;
+    margin-bottom: 25px;
+    min-height: 40px;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 3 / 4;
+  }
+
+  &--second {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 27px;
+    }
+  }
+
+  &--third {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 26px;
+    }
   }
 }
 
@@ -130,13 +194,28 @@
   font-size: 16px;
   line-height: 20px;
   color: $icon-content-color;
-  background-image: url("../img/form-background-mobile.png");
+  background-image: url("../img/catalog-background-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $main-color;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/form-background-mobile@2x.png");
+    background-image: url("../img/catalog-background-mobile@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    min-height: 200px;
+    background-image: url("../img/catalog-background-tablet.png");
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog-background-tablet@2x.png");
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -154,6 +233,10 @@
     height: 81px;
     background-image: url("../img/icons/sprite.svg#icon-gift");
     background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      margin-left: (61 / 708) * 100%;
+    }
   }
 }
 
@@ -161,4 +244,10 @@
   margin: 0 auto;
   width: (165 / 280) * 100%;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-left: (423 / 708) * 100%;
+    width: (162 / 708) * 100%;
+    text-align: left;
+  }
 }

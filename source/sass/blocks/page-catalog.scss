@@ -1,3 +1,13 @@
 .page-catalog {
   margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+  }
+}
+
+.page-catalog__main-goods {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 8px;
+  }
 }

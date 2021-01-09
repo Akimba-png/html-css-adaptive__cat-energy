@@ -23,8 +23,8 @@
         <button class="main-navigation__navigation-toggle js-main-navigation-toggle" type="button"><span class="visually-hidden">переключить отображение меню навигации</span></button>
         <ul class="main-navigation__list">
           <li class="main-navigation__item main-navigation__item--inner"><a class="main-navigation__item-link" href="index.html">Главная</a></li>
-          <li class="main-navigation__item main-navigation__item--inner"><a class="main-navigation__item-link main-navigation__item-link--active" href="catalog.html">Каталог продукции</a></li>
-          <li class="main-navigation__item main-navigation__item--inner"><a class="main-navigation__item-link">Подбор программы</a></li>
+          <li class="main-navigation__item main-navigation__item--inner main-navigation__item--catalog"><a class="main-navigation__item-link main-navigation__item-link--active" href="catalog.html">Каталог продукции</a></li>
+          <li class="main-navigation__item main-navigation__item--inner"><a class="main-navigation__item-link" href="form.html">Подбор программы</a></li>
         </ul>
       </nav>
     </div>
@@ -35,12 +35,12 @@
         <h1 class="main-goods__title">Каталог продукции</h1>
         <h2 class="visually-hidden">Основные товары</h2>
         <ul class="main-goods__list">
-          <li class="main-goods__item lot">
+          <li class="main-goods__item lot lot--first">
             <div class="lot__wrapper">
               <a class="lot__link-title" href="blank.html" aria-label="заказать Cat energy pro курица 500 г">
-                <h3 class="lot__title">Cat energy pro 500 г</h3>
+                <h3 class="lot__title">Cat energy pro <span class="lot__row">500 г</span></h3>
               </a>
-              <a class="lot__link-image" href="blank.html" aria-label="заказать Cat energy pro курица 500 г">
+              <a class="lot__link-image lot__link-image--first" href="blank.html" aria-label="заказать Cat energy pro курица 500 г">
                 <Picture>
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/chicken-500-tablet.webp 1x, img/chicken-500-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/chicken-500-mobile.webp 1x, img/chicken-500-mobile@2x.webp 2x">
@@ -54,17 +54,17 @@
                 <dt class="lot__propertie">Вкус</dt>
                 <dd class="lot__definition">Курица</dd>
                 <dt class="lot__propertie">Цена</dt>
-                <dd class="lot__definition lot__definition--uppercase">700&nbsp;р.</dd>
+                <dd class="lot__definition lot__definition--uppercase">700&nbsp;Р.</dd>
               </dl>
               <a class="lot__button button" href="blank.html" aria-label="заказать Cat energy pro курица 500 г">Заказать</a>
             </div>
           </li>
-          <li class="main-goods__item lot">
+          <li class="main-goods__item lot lot--second">
             <div class="lot__wrapper">
               <a class="lot__link-title" href="blank.html" aria-label="заказать Cat energy pro курица 1000 г">
-                <h3 class="lot__title">Cat energy pro 1000 г</h3>
+                <h3 class="lot__title">Cat energy pro <span class="lot__row">1000 г</span></h3>
               </a>
-              <a class="lot__link-image" href="blank.html" aria-label="заказать Cat energy pro курица 1000 г">
+              <a class="lot__link-image lot__link-image--second" href="blank.html" aria-label="заказать Cat energy pro курица 1000 г">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/chicken-1000-desktop.webp 1x, img/chicken-1000-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/chicken-1000-tablet.webp 1x, img/chicken-1000-tablet@2x.webp 2x">
@@ -80,15 +80,15 @@
                 <dt class="lot__propertie">Вкус</dt>
                 <dd class="lot__definition">Курица</dd>
                 <dt class="lot__propertie">Цена</dt>
-                <dd class="lot__definition lot__definition--uppercase">1000&nbsp;р.</dd>
+                <dd class="lot__definition lot__definition--uppercase">1000&nbsp;Р.</dd>
               </dl>
               <a class="lot__button button" href="blank.html" aria-label="заказать Cat energy pro курица 1000 г">Заказать</a>
             </div>
           </li>
-          <li class="main-goods__item lot">
+          <li class="main-goods__item lot lot--third">
             <div class="lot__wrapper">
               <a class="lot__link-title" href="blank.html" aria-label="заказать Cat energy pro рыба 500 г">
-                <h3 class="lot__title">Cat energy pro 500 г</h3>
+                <h3 class="lot__title">Cat energy pro <span class="lot__row">500 г</span></h3>
               </a>
               <a class="lot__link-image lot__link-image--third" href="blank.html" aria-label="заказать Cat energy pro рыба 500 г">
                 <picture>
@@ -104,17 +104,17 @@
                 <dt class="lot__propertie">Вкус</dt>
                 <dd class="lot__definition">Рыба</dd>
                 <dt class="lot__propertie">Цена</dt>
-                <dd class="lot__definition lot__definition--uppercase">700&nbsp;р.</dd>
+                <dd class="lot__definition lot__definition--uppercase">700&nbsp;Р.</dd>
               </dl>
               <a class="lot__button button" href="blank.html" aria-label="заказать Cat energy pro рыба 500 г">Заказать</a>
             </div>
           </li>
-          <li class="main-goods__item lot">
+          <li class="main-goods__item lot lot--forth">
             <div class="lot__wrapper">
               <a class="lot__link-title" href="blank.html" aria-label="заказать Cat energy pro рыба 1000 г">
-                <h3 class="lot__title">Cat energy pro 1000 г</h3>
+                <h3 class="lot__title">Cat energy pro <span class="lot__row">1000 г</span></h3>
               </a>
-              <a class="lot__link-image" href="blank.html" aria-label="заказать Cat energy pro рыба 1000 г">
+              <a class="lot__link-image lot__link-image--forth" href="blank.html" aria-label="заказать Cat energy pro рыба 1000 г">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/fish-1000-desktop.webp 1x, img/fish-1000-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/fish-1000-tablet.webp 1x, img/fish-1000-tablet@2x.webp 2x">
@@ -130,19 +130,19 @@
                 <dt class="lot__propertie">Вкус</dt>
                 <dd class="lot__definition">Рыба</dd>
                 <dt class="lot__propertie">Цена</dt>
-                <dd class="lot__definition lot__definition--uppercase">1000&nbsp;р.</dd>
+                <dd class="lot__definition lot__definition--uppercase">1000&nbsp;Р.</dd>
               </dl>
               <a class="lot__button button" href="blank.html" aria-label="заказать Cat energy pro рыба 1000 г">Заказать</a>
             </div>
           </li>
-          <li class="main-goods__item lot">
+          <li class="main-goods__item lot lot--fifth">
             <div class="lot__wrapper">
               <a class="lot__link-title" href="blank.html" aria-label="заказать Cat energy slim гречка 500 г">
-                <h3 class="lot__title">Cat energy slim 500 г</h3>
+                <h3 class="lot__title">Cat energy slim <span class="lot__row">500 г</span></h3>
               </a>
               <a class="lot__link-image lot__link-image--fifth" href="blank.html" aria-label="заказать Cat energy slim гречка 500 г">
                 <picture>
-                  <source type="iamge/webp" media="(min-width: 768px)" srcset="img/buckwheat-500-tablet.webp 1x, img/buckwheat-500-tablet@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/buckwheat-500-tablet.webp 1x, img/buckwheat-500-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/buckwheat-500-mobile.webp 1x, img/buckwheat-500-mobile@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/buckwheat-500-tablet.png 1x, img/buckwheat-500-tablet@2x.png 2x">
                   <img src="img/buckwheat-500-mobile.png" srcset="img/buckwheat-500-mobile@2x.png 2x" width="68" height="78" alt="Изображение упаковки товара Cat energy slim с гречкой 500г">
@@ -154,17 +154,17 @@
                 <dt class="lot__propertie">Вкус</dt>
                 <dd class="lot__definition">Гречка</dd>
                 <dt class="lot__propertie">Цена</dt>
-                <dd class="lot__definition lot__definition--uppercase">400&nbsp;р.</dd>
+                <dd class="lot__definition lot__definition--uppercase">400&nbsp;Р.</dd>
               </dl>
               <a class="lot__button button" href="blank.html" aria-label="заказать Cat energy slim гречка 500 г">Заказать</a>
             </div>
           </li>
-          <li class="main-goods__item lot">
+          <li class="main-goods__item lot lot--sixth">
             <div class="lot__wrapper">
               <a class="lot__link-title" href="blank.html" aria-label="заказать Cat energy slim гречка 1000 г">
-                <h3 class="lot__title">Cat energy slim 1000 г</h3>
+                <h3 class="lot__title">Cat energy slim <span class="lot__row">1000 г</span></h3>
               </a>
-              <a class="lot__link-image" href="blank.html" aria-label="заказать Cat energy slim гречка 1000 г">
+              <a class="lot__link-image lot__link-image--sixth" href="blank.html" aria-label="заказать Cat energy slim гречка 1000 г">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/buckwheat-1000-desktop.webp 1x, img/buckwheat-1000-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/buckwheat-1000-tablet.webp 1x, img/buckwheat-1000-tablet@2x.webp 2x">
@@ -180,12 +180,12 @@
                 <dt class="lot__propertie">Вкус</dt>
                 <dd class="lot__definition">Гречка</dd>
                 <dt class="lot__propertie">Цена</dt>
-                <dd class="lot__definition lot__definition--uppercase">700&nbsp;р.</dd>
+                <dd class="lot__definition lot__definition--uppercase">700&nbsp;Р.</dd>
               </dl>
               <a class="lot__button button" href="blank.html" aria-label="заказать Cat energy slim гречка 1000 г">Заказать</a>
             </div>
           </li>
-          <li class="main-goods__item lot">
+          <li class="main-goods__item lot lot--seventh">
             <div class="lot__wrapper">
               <a class="lot__link-title" href="blank.html" aria-label="заказать Cat energy slim рис 500 г">
                 <h3 class="lot__title">Cat energy slim 500 г</h3>
@@ -204,7 +204,7 @@
                 <dt class="lot__propertie">Вкус</dt>
                 <dd class="lot__definition">Рис</dd>
                 <dt class="lot__propertie">Цена</dt>
-                <dd class="lot__definition lot__definition--uppercase">500&nbsp;р.</dd>
+                <dd class="lot__definition lot__definition--uppercase">500&nbsp;Р.</dd>
               </dl>
               <a class="lot__button button" href="blank.html" aria-label="заказать Cat energy slim рис 500 г">Заказать</a>
             </div>
@@ -212,7 +212,7 @@
           <li class="main-goods__item lot lot--all">
             <div class="lot__wrapper lot__wrapper--all">
               <a class="lot__link-title lot__link-title--all" href="blank.html">
-                <h3 class="lot__title">Показать еще 100500 товаров</h3>
+                <h3 class="lot__title lot__title--all">Показать еще 100500 товаров</h3>
               </a>
               <p class="lot__text">На самом деле вкусов гораздо больше!</p>
               <a class="lot__button lot__button--show-all button" href="blank.html">Показать все</a>
@@ -243,7 +243,7 @@
               <dt class="additional-goods__propertie">5 литров</dt>
               <dd class="additional-goods__definition additional-goods__definition--uppercase">50&nbsp;р.</dd>
             </dl>
-            <a class="additional-goods__button button" href="blank.html" aria-label="Заказать питьевая вода">Заказать</a>
+            <a class="additional-goods__button button additional-goods__button--second" href="blank.html" aria-label="Заказать питьевая вода">Заказать</a>
           </li>
           <li class="additional-goods__item">
             <a class="additional-goods__link-title" href="blank.html" aria-label="Заказать молоко">
@@ -253,7 +253,7 @@
               <dt class="additional-goods__propertie">1 литр</dt>
               <dd class="additional-goods__definition additional-goods__definition--uppercase">100&nbsp;р.</dd>
             </dl>
-            <a class="additional-goods__button button" href="blank.html" aria-label="Заказать молоко">Заказать</a>
+            <a class="additional-goods__button button additional-goods__button--third" href="blank.html" aria-label="Заказать молоко">Заказать</a>
           </li>
           <li class="additional-goods__item">
             <a class="additional-goods__link-title" href="blank.html" aria-label="Заказать витамины">
