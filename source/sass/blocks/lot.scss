@@ -1,10 +1,9 @@
 .lot {
   position: relative;
-  min-height: 208px;
+  min-height: 209px;
   border-bottom: 1px solid $main-goods-border-color;
   box-sizing: border-box;
   padding-top: 21px;
-  min-height: 209px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 59px;
@@ -12,18 +11,17 @@
     width: 324px;
     min-height: 511px;
     border: none;
+  }
 
-    // outline: 1px solid blue;
+  @media (min-width: $desktop-width) {
+    margin-bottom: 60px;
+    padding-top: 0;
+    width: 245px;
+    min-height: 513px;
+  }
 
-    // &--third {
-    //   min-height: 512px;
-    // }
-
-    &--third, &--forth, &--fifth {
-      margin-bottom: 60px;
-    }
-
-    &::before {
+  &::before {
+    @media (min-width: $tablet-width) {
       content: "";
       display: block;
       position: absolute;
@@ -33,20 +31,24 @@
       min-height: 431px;
       background-color: $background-color;
     }
-
-    &:last-child::before {
-      box-sizing: border-box;
-      border: 2px solid $background-color;
-      background-color: transparent;
-    }
   }
 
-  @media (min-width: $desktop-width) {
-    width: 245px;
+  &--third,
+  &--forth,
+  &--fifth {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 60px;
+    }
   }
 
   &--all {
     min-height: 208px;
+
+    &::before {
+      box-sizing: border-box;
+      border: 2px solid $background-color;
+      background-color: transparent;
+    }
   }
 }
 
@@ -72,6 +74,10 @@
       padding-top: 234px;
     }
 
+    @media (min-width: $desktop-width) {
+      padding-top: 243px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -86,6 +92,10 @@
       @media (min-width: $tablet-width) {
         top: 156px;
         width: 60px;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: 165px;
       }
     }
 
@@ -103,6 +113,10 @@
       @media (min-width: $tablet-width) {
         top: 126px;
         height: 60px;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: 135px;
       }
     }
   }
@@ -124,7 +138,14 @@
     width: (147 / 250) * 100%;
     text-align: center;
 
-    // outline: 1px solid orange;
+    &--all {
+      margin-bottom: 22px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 16px;
+    width: (160 / 169) * 100%;
 
     &--all {
       margin-bottom: 22px;
@@ -149,11 +170,19 @@
       line-height: 23px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    line-height: 23px;
+  }
 }
 
 .lot__row {
   @media (min-width: $tablet-width) {
     padding-left: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 4px;
   }
 }
 
@@ -165,8 +194,6 @@
   align-items: flex-start;
   box-sizing: border-box;
   padding-top: 11px;
-
-  // outline: 1px solid green;
 
   &--third {
     padding-top: 24px;
@@ -193,14 +220,42 @@
       padding-top: 26px;
     }
 
-    &--second, &--forth, &--sixth {
+    &--second,
+    &--forth,
+    &--sixth {
       padding-top: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 33px;
+
+    &--first {
+      padding-top: 30px;
+    }
+
+    &--second,
+    &--forth,
+    &--sixth {
+      padding-top: 3px;
+      width: 172px;
+    }
+
+    &--third {
+      padding-top: 28px;
+    }
+
+    &--fifth {
+      padding-top: 32px;
+    }
+
+    &--seventh {
+      padding-top: 29px;
     }
   }
 }
 
-.lot__link-image img {
-  // outline: 1px solid red;
+.lot__image {
   width: auto;
 }
 
@@ -210,8 +265,6 @@
   margin: 0;
   font-size: 12px;
   line-height: 16px;
-
-  // outline: 1px solid purple;
 
   @media (min-width: $tablet-width) {
     min-height: 96px;
@@ -223,10 +276,6 @@
   @media (min-width: $tablet-width) {
     border-bottom: 1px solid $owner-input-border-color;
     padding-top: 7px;
-    // padding-bottom: 9px;
-
-    // box-sizing: border-box;
-
   }
 }
 
@@ -236,10 +285,7 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 7px;
-    // padding-bottom: 9px;
     border-bottom: 1px solid $owner-input-border-color;
-
-    // box-sizing: border-box;
   }
 }
 
@@ -270,6 +316,10 @@
       color: rgba($text-color, 0.3);
     }
   }
+
+  @media (min-width: $desktop-width) {
+    min-height: 40px;
+  }
 }
 
 .lot__text {
@@ -285,5 +335,9 @@
     width: (200 / 248) * 100%;
     font-size: 16px;
     line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
   }
 }

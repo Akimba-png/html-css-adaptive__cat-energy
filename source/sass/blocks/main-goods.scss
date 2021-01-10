@@ -17,7 +17,7 @@
 
   @media (min-width: $desktop-width) {
     @include desktop-padding;
-    outline: 1px solid red;
+    padding-top: 60px;
   }
 }
 
@@ -57,7 +57,5 @@
 
   @media (min-width: $desktop-width) {
     gap: (80 / 1220) * 100%;
-
-    outline: 1px solid green;
   }
 }

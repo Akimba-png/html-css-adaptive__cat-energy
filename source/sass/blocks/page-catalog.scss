@@ -4,10 +4,18 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 76px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 17px;
+  }
 }
 
 .page-catalog__main-goods {
   @media (min-width: $tablet-width) {
     margin-bottom: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 15px;
   }
 }
