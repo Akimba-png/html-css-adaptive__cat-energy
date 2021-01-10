@@ -27,7 +27,6 @@ exports.clean = clean;
 const copy = () => {
   return gulp.src([
     "source/fonts/*.{woff2,woff}",
-    "source/img/**/*.{jpg,png,svg}"
   ], {
     base: "source"
   })
@@ -53,7 +52,7 @@ exports.optiImage = optiImage;
 // Webp
 
 const createWebp = () => {
-  return gulp.src("source/img/*.{jpg,png}")
+  return gulp.src("build/img/*.{jpg,png}")
   .pipe(webp({quality: 90}))
   .pipe(gulp.dest("build/img"));
 }
@@ -63,7 +62,7 @@ exports.createWebp = createWebp;
 // Sprite
 
 const createSprite = () => {
-  return gulp.src("source/img/icons/*.svg")
+  return gulp.src("build/img/icons/*.svg")
   .pipe(svgsprite({
     mode: {
       stack: {
@@ -145,6 +144,7 @@ const watcher = () => {
 
 const build = gulp.series (
   clean,
+  optiImage,
   gulp.parallel (
     copy,
     html,
@@ -161,6 +161,7 @@ exports.build = build;
 
 exports.default = gulp.series (
   clean,
+  optiImage,
   gulp.parallel (
     copy,
     html,
