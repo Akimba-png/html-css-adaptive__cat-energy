@@ -27,6 +27,7 @@ exports.clean = clean;
 const copy = () => {
   return gulp.src([
     "source/fonts/*.{woff2,woff}",
+    "source/*.ico",
   ], {
     base: "source"
   })
@@ -94,11 +95,14 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer(),
+      autoprefixer()
+    ]))
+    .pipe(gulp.dest("build/css"))
+    .pipe(postcss([
       csso()
     ]))
-    .pipe(sourcemap.write("."))
     .pipe(rename("style.min.css"))
+    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
