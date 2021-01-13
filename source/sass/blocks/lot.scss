@@ -1,13 +1,27 @@
 .lot {
   position: relative;
+  min-height: 209px;
   border-bottom: 1px solid $main-goods-border-color;
+  box-sizing: border-box;
+  padding-top: 21px;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 59px;
+    padding-top: 8px;
     width: 324px;
     min-height: 511px;
     border: none;
+  }
 
-    &::before {
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    margin-bottom: 62px;
+    width: 245px;
+    min-height: 512px;
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
       content: "";
       display: block;
       position: absolute;
@@ -17,36 +31,119 @@
       min-height: 430px;
       background-color: $background-color;
     }
+  }
 
-    &:last-child::before {
+  &--all {
+    min-height: 208px;
+
+    &::before {
       box-sizing: border-box;
       border: 2px solid $background-color;
       background-color: transparent;
     }
   }
-
-  @media (min-width: $desktop-width) {
-    width: 245px;
-  }
 }
 
 .lot__wrapper {
   @include mobile-padding;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding: 0 37px;
+    padding-left: 39px;
+    padding-right: 37px;
     height: 100%;
+  }
+
+  &--all {
+    box-sizing: border-box;
+    padding-top: 57px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 234px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 243px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 18px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 30px;
+      height: 2px;
+      background-color: $plus-color;
+
+      @media (min-width: $tablet-width) {
+        top: 156px;
+        width: 60px;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: 165px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 2px;
+      height: 30px;
+      background-color: $plus-color;
+
+      @media (min-width: $tablet-width) {
+        top: 126px;
+        height: 60px;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: 135px;
+      }
+    }
   }
 }
 
-.lot__link-title--all {
-  grid-column: 1 / 3;
-  text-align: center;
+.lot__link-title {
+  margin-bottom: 13px;
+  width: (80 / 138) * 100%;
+
+  &--all {
+    grid-column: 1 / 3;
+    margin-bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    align-self: center;
+    width: (147 / 250) * 100%;
+    text-align: center;
+
+    &--all {
+      margin-bottom: 22px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 16px;
+    width: (160 / 169) * 100%;
+
+    &--all {
+      margin-bottom: 22px;
+    }
+  }
 }
 
 .lot__title {
@@ -57,30 +154,76 @@
   font-size: 16px;
   line-height: 20px;
   color: $subtitle-color;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 24px;
+
+    &--all {
+      line-height: 23px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 23px;
+  }
+}
+
+.lot__row {
+  @media (min-width: $tablet-width) {
+    padding-left: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 4px;
+  }
 }
 
 .lot__link-image {
   grid-column: 1 / 2;
-  grid-row: 1 / 3;
+  grid-row: 1 / 4;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  margin-top: -2px;
 
   @media (min-width: $tablet-width) {
+    align-items: flex-start;
     order: -1;
+    margin-top: 0;
+    min-height: 234px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 32px;
+    padding-top: 4px;
+    align-items: flex-start;
+    min-height: 210px;
+  }
+}
+
+.lot__image {
+  width: auto;
 }
 
 .lot__properties {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin: 0;
   font-size: 12px;
   line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 96px;
+    font-size: 16px;
+  }
 }
 
 .lot__propertie {
   @media (min-width: $tablet-width) {
     border-bottom: 1px solid $owner-input-border-color;
+    padding-top: 7px;
   }
 }
 
@@ -89,14 +232,25 @@
   text-align: right;
 
   @media (min-width: $tablet-width) {
+    padding-top: 7px;
     border-bottom: 1px solid $owner-input-border-color;
   }
 }
 
 .lot__button {
   grid-column: 1 / 3;
+  grid-row: 3 / 4;
+  box-sizing: border-box;
+  margin-top: 22px;
+  padding-top: 10px;
+  min-height: 40px;
   font-size: 16px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 33px;
+    min-height: 38.5px;
+  }
 
   &--show-all {
     color: $text-color;
@@ -110,6 +264,10 @@
       color: rgba($text-color, 0.3);
     }
   }
+
+  @media (min-width: $desktop-width) {
+    min-height: 40px;
+  }
 }
 
 .lot__text {
@@ -118,4 +276,16 @@
   margin: 0;
   font-size: 12px;
   line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    margin-bottom: 55px;
+    width: (200 / 248) * 100%;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }

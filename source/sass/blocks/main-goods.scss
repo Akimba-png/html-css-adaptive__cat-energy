@@ -1,18 +1,15 @@
-.main-goods {
-  border-top: 1px solid $dividing-line-color;
-
-  @media (min-width: $tablet-width) {
-    border: none;
-  }
-}
-
 .main-goods__wrapper {
+  box-sizing: border-box;
+  padding-top: 26px;
+
   @media (min-width: $tablet-width) {
     @include tablet-padding;
+    padding-top: 48px;
   }
 
   @media (min-width: $desktop-width) {
     @include desktop-padding;
+    padding-top: 60px;
   }
 }
 
@@ -20,6 +17,7 @@
   @include alternative-font;
   margin: 0;
   padding-left: $mobile-indent;
+  padding-bottom: 41px;
   border-bottom: 1px solid $main-goods-border-color;
   font-weight: normal;
   font-size: 36px;
@@ -27,8 +25,11 @@
   color: $title-color;
 
   @media (min-width: $tablet-width) {
-    border: none;
+    margin-bottom: 84px;
     padding: 0;
+    border: none;
+    font-size: 60px;
+    line-height: 60px;
   }
 }
 
@@ -42,6 +43,7 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     gap: (60 / 708) * 100%;
   }
 

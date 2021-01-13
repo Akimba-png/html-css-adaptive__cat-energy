@@ -1,8 +1,51 @@
+.additional-goods {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: (53 / 320) * 100%;
+    height: 2px;
+    background-color: $main-color;
+
+    @media (min-width: $tablet-width) {
+      top: 22px;
+      width: (328 / 768) * 100%;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 24px;
+      width: (957 / 1440) * 100%;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: 0;
+      width: (30 / 768) * 100%;
+      height: 2px;
+      background-color: $main-color;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 24px;
+      width: (70 / 1440) * 100%;
+    }
+  }
+}
+
 .additional-goods__wrapper {
   @include mobile-padding;
+  padding-top: 25px;
 
   @media (min-width: $tablet-width) {
     @include tablet-padding;
+    padding-top: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -16,71 +59,120 @@
 .additional-goods__title {
   @include alternative-font;
   margin: 0;
+  margin-bottom: 35px;
   font-weight: normal;
   font-size: 24px;
   line-height: 24px;
   color: $title-color;
 
+  @media (min-width: $tablet-width) {
+    margin-left: (40 / 768) * 100%;
+    margin-bottom: 81px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
   @media (min-width: $desktop-width) {
+    margin-left: 0;
     width: 100%;
   }
 }
 
 .additional-goods__list {
   margin: 0;
+  margin-bottom: 39px;
   padding: 0;
+  border-top: 1px solid $owner-input-border-color;
   list-style: none;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 69px;
     border-left: 1px solid $owner-input-border-color;
     border-right: 1px solid $owner-input-border-color;
   }
 
   @media (min-width: $desktop-width) {
-    border: none;
-
     flex-grow: 1;
+    border: none;
+    border-top: 1px solid $owner-input-border-color;
   }
 }
 
 .additional-goods__item {
   display: grid;
+  box-sizing: border-box;
+  padding-top: 14px;
   border-bottom: 1px solid $owner-input-border-color;
-
-  &:first-child {
-    border-top: 1px solid $owner-input-border-color;
-  }
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
-    padding-left: (38 / 708) * 100%;
-    padding-right: (38 / 708) * 100%;
+    padding-top: 24px;
+    padding-left: (37 / 708) * 100%;
+    padding-right: (37 / 708) * 100%;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr 0.75fr;
     padding: 0;
+    padding-top: 24px;
   }
 }
 
 .additional-goods__item-title {
   @include alternative-font;
   margin: 0;
+  margin-bottom: 12px;
   text-transform: uppercase;
   font-weight: normal;
   font-size: 16px;
   line-height: 16px;
   color: $subtitle-color;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 2px;
+    padding-left: (1 / 316) * 100%;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .additional-goods__properties {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 15px;
   line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: right;
+    column-gap: (48 / 315) * 100%;
+    margin-left: auto;
+    margin-bottom: 23px;
+    padding-top: 5px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: auto;
+    justify-content: space-between;
+    width: (288 / 325) * 100%;
+  }
 }
 
 .additional-goods__definition {
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    min-width: 45px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
 
   &--uppercase {
     text-transform: uppercase;
@@ -88,25 +180,113 @@
 }
 
 .additional-goods__button {
+  box-sizing: border-box;
+  margin-bottom: 17px;
+  padding-top: 11px;
+  min-height: 40px;
   font-size: 16px;
   line-height: 20px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 3;
+    margin-bottom: 25px;
+
+    &--second {
+      margin-bottom: 27px;
+    }
+
+    &--third {
+      margin-bottom: 26px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 3 / 4;
+    margin-top: -9px;
+    margin-bottom: 16px;
   }
 }
 
 .additional-goods__promo {
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 186px;
+  min-height: 289px;
   font-size: 16px;
   line-height: 20px;
   color: $icon-content-color;
+  background-image: url("../img/catalog-background-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: $main-color;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/catalog-background-mobile@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    min-height: 200px;
+    background-image: url("../img/catalog-background-tablet.png");
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog-background-tablet@2x.png");
+    }
+  }
+
   @media (min-width: $desktop-width) {
+    align-self: flex-start;
+    padding-top: 145px;
     width: (245 / 1220) * 100%;
+    min-height: 289px;
+    background-image: url("../img/catalog-background-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog-background-desktop@2x.png");
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    margin: 0 auto;
+    top: 57px;
+    left: 0;
+    right: 0;
+    width: 114px;
+    height: 81px;
+    background-image: url("../img/icons/sprite.svg#icon-gift");
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      margin-left: (61 / 708) * 100%;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: auto;
+    }
+  }
+}
+
+.additional-goods__text {
+  margin: 0 auto;
+  width: (165 / 280) * 100%;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-left: (423 / 708) * 100%;
+    width: (162 / 708) * 100%;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    width: (180 / 245) * 100%;
+    text-align: center;
   }
 }

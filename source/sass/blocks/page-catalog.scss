@@ -1,0 +1,21 @@
+.page-catalog {
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 17px;
+  }
+}
+
+.page-catalog__main-goods {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 13px;
+  }
+}

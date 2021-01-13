@@ -1,12 +1,48 @@
 .comment {
+  position: relative;
   border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: (158 / 320) * 100%;
+    height: 2px;
+    background-color: $main-color;
+
+    @media (min-width: $tablet-width) {
+      top: 22px;
+      width: (479 / 768) * 100%;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: (1108 / 1440) * 100%;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: 0;
+      width: (30 / 768) * 100%;
+      height: 2px;
+      background-color: $main-color;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: (70 / 1440) * 100%;
+    }
+  }
 }
 
 .comment__wrapper {
   @include mobile-padding;
 
   @media (min-width: $tablet-width) {
-    @include tablet-padding;
+    @include tablet-form-padding;
   }
 
   @media (min-width: $desktop-width) {
@@ -16,18 +52,38 @@
 
 .comment__title {
   margin: 0;
+  margin-bottom: 38px;
   text-transform: none;
   font-weight: normal;
   font-size: 24px;
   line-height: 26px;
   color: $title-color;
+
+  @media (min-width: $tablet-width) {
+    margin-left: -2px;
+    margin-bottom: 75px;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .comment__text {
   @include alternative-font;
+  box-sizing: border-box;
+  padding: 5px 14px;
+  padding-right: 5px;
   width: 100%;
+  min-height: 150px;
   resize: none;
   border: 1px solid $input-border-color;
   text-transform: uppercase;
   font-size: 16px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 9px;
+    padding-left: 17px;
+    min-height: 174px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
