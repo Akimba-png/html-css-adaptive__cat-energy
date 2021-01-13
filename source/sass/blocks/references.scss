@@ -73,22 +73,26 @@
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  margin-left: -8px;
+  margin-left: -4px;
   padding: 0;
-  padding-top: 22px;
-  width: (127 / 280) * 100%;
+  padding-top: 21px;
+  width: (130 / 280) * 100%;
   list-style: none;
 
   @media (min-width: $tablet-width) {
-    margin-left: (25 / 768) * 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin: 0;
+    margin-left: 35px;
     padding-top: 0;
-    width: (49 / 280) * 100%;
+    width: (139 / 708) * 100%;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: (23 / 1220) * 100%;
+    margin-left: (36 / 1220) * 100%;
     padding-top: 5px;
-    width: 10.5%;
+    width: 11.5%;
   }
 }
 
@@ -112,11 +116,14 @@
 
     &--instagram {
       margin-top: -1px;
+      padding-left: 8px;
       width: 23px;
     }
 
     &--facebook {
-      width: 19px;
+      margin-top: -4px;
+      padding-right: 8px;
+      width: 32px;
     }
   }
 }
