@@ -108,6 +108,18 @@
     opacity: 0.3;
   }
 
+  &--vk {
+    width: 23px;
+  }
+
+  &--instagram {
+    width: 16px;
+  }
+
+  &--facebook {
+    width: 22px;
+  }
+
   @media (min-width: $tablet-width) {
     &--vk {
       margin-top: -4px;
