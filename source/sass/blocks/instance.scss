@@ -235,8 +235,9 @@
     grid-column: 2 / 3;
     grid-row: 1 / 6;
     margin: 0;
-    margin-right: -27px;
+    margin-right: -80px;
     margin-top: -104px;
+    width: 730px;
   }
 }
 
@@ -252,7 +253,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      width: 53.9%;
+      width: 50%;
     }
   }
 
@@ -262,16 +263,18 @@
     right: 43px;
     z-index: -1;
     width: 0;
+    max-width: (241 / 311) * 100%;
 
     @media (min-width: $tablet-width) {
       top: 48px;
-      right: 41px;
-      width: (298 / 677) * 100%;
+      right: 0;
+      left: initial;
+      width: 50%;
     }
 
     @media (min-width: $desktop-width) {
       top: 47px;
-      width: (271 / 677) * 100%;
+      width: 50%;
     }
   }
 }

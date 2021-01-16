@@ -1,4 +1,4 @@
-.slider__toggles {
+.slider {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -66,7 +66,7 @@
 
 .slider__range-scale {
   display: flex;
-  justify-content: left;
+  justify-content: flex-start;
   position: relative;
   align-self: center;
   box-sizing: border-box;

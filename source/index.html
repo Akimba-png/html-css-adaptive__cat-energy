@@ -109,30 +109,34 @@
           </div>
         </dl>
         <b class="instance__lead">Затраты на питание: <span class="instance__ammount">15&nbsp;000&nbsp;руб.</span></b>
-        <ul class="instance__picture-list slider">
-          <li class="instance__picture-item instance__picture-item--before slider__item">
+        <ul class="instance__picture-list">
+          <li class="instance__picture-item instance__picture-item--before js-instance__picture-item--before">
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/cat-before-desktop.webp 1x, img/cat-before-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-before-tablet.webp 1x, img/cat-before-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/cat-before.webp 1x, img/cat-before@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/cat-before-desktop.png 1x, img/cat-before-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/cat-before-tablet.png 1x, img/cat-before-tablet@2x.png 2x">
               <img class="instance__picture-image instance__picture-image--before" src="img/cat-before.png" srcset="img/cat-before@2x.png 2x" width="311" height="232" alt="Изображение питомца до программы">
             </picture>
           </li>
-          <li class="instance__picture-item instance__picture-item--after slider__item">
+          <li class="instance__picture-item instance__picture-item--after js-instance__picture-item--after">
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/cat-after-desktop.webp 1x, img/cat-after-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-after-tablet.webp 1x, img/cat-after-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/cat-after.webp 1x, img/cat-after@2x.webp 2x">
-              <source media="(min-width: 768px)" srcset="img/cat-after-tablet.png 1x, img/cat-after-tablet@2x.png 2x ">
+              <source media="(min-width: 1440px)" srcset="img/cat-after-desktop.png 1x, img/cat-after-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/cat-after-tablet.png 1x, img/cat-after-tablet@2x.png 2x">
               <img class="instance__picture-image instance__picture-image--after" src="img/cat-after.png" srcset="img/cat-after@2x.png 2x" width="251" height="240" alt="Изображение питомца после программы">
             </picture>
           </li>
         </ul>
-        <div class="instance__toggles slider__toggles">
-          <button class="slider__toggle slider__toggle--before"><span class="visually-hidden">переключить на изображение питомца до программы</span>Было</button>
-          <div class="slider__range-scale">
-            <div class="slider__range-toggle"></div>
+        <div class="instance__toggles slider js-slider">
+          <button class="slider__toggle slider__toggle--before js-slider__toggle--before"><span class="visually-hidden">переключить на изображение питомца до программы</span>Было</button>
+          <div class="slider__range-scale js-slider__range-scale">
+            <div class="slider__range-toggle js-slider__range-toggle"></div>
           </div>
-          <button class="slider__toggle slider__toggle--after"><span class="visually-hidden">переключить на изображение питомца после программы</span>Стало</button>
+          <button class="slider__toggle slider__toggle--after js-slider__toggle--after"><span class="visually-hidden">переключить на изображение питомца после программы</span>Стало</button>
         </div>
       </div>
     </section>
@@ -179,7 +183,7 @@
     </div>
   </footer>
 
-  <script src="js/main-navigation.min.js"></script>
+  <script src="js/scripts.min.js"></script>
 
 </body>
 
