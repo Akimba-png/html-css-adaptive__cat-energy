@@ -1,5 +1,4 @@
 // Main menu
-
 const menu = document.querySelector(".js-main-navigation");
 const menuToggle = menu.querySelector(".js-main-navigation-toggle");
 
@@ -9,7 +8,6 @@ menuToggle.addEventListener("click", function () {
 });
 
 // Slider
-
 const imageBefore = document.querySelector(".js-instance__picture-item--before");
 const imageAfter = document.querySelector(".js-instance__picture-item--after");
 const slider = document.querySelector(".js-slider");
@@ -66,3 +64,76 @@ buttonAfter.addEventListener("click", function () {
   toggle.style.left = (bar.offsetWidth - toggle.offsetWidth) + "px";
   bar.style.justifyContent = "flex-end";
 });
+
+
+// Map
+ymaps.ready(init);
+
+const mediaQueryTablet = window.matchMedia("(min-width: 768px)");
+const mediaQueryDesktop = window.matchMedia("(min-width: 1440px)");
+
+function init() {
+
+  if (mediaQueryDesktop.matches) {
+    var myMap = new ymaps.Map("map", {
+      center: [59.938450, 30.317956],
+      zoom: 16,
+      controls: ["smallMapDefaultSet"]
+    }),
+
+    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+    ),
+
+    myPlacemark = new ymaps.Placemark([59.938635, 30.323118], {
+    }, {
+      iconLayout: "default#image",
+      iconImageHref: "../img/map-pin-tablet.png",
+      iconImageSize: [113, 106],
+      iconImageOffset: [-51, -54]
+    })
+  }
+
+  else if (mediaQueryTablet.matches) {
+      var myMap = new ymaps.Map("map", {
+      center: [59.938635, 30.323118],
+      zoom: 15,
+      controls: ["smallMapDefaultSet"]
+    }),
+
+    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+    ),
+
+    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+    }, {
+      iconLayout: "default#image",
+      iconImageHref: "../img/map-pin-tablet.png",
+      iconImageSize: [113, 106],
+      iconImageOffset: [-51, -54]
+    })
+  }
+
+  else {
+    var myMap = new ymaps.Map("map", {
+      center: [59.938635, 30.323118],
+      zoom: 14,
+      controls: ["smallMapDefaultSet"]
+    }),
+
+    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+    ),
+
+    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+    }, {
+      iconLayout: "default#image",
+      iconImageHref: "../img/map-pin-mobile.png",
+      iconImageSize: [57, 53],
+      iconImageOffset: [-25, -42]
+    })
+  }
+
+  myMap.geoObjects
+    .add(myPlacemark)
+}
