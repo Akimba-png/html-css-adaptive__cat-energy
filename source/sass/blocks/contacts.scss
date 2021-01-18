@@ -6,6 +6,9 @@
   padding-top: 29px;
   min-height: 114px;
 
+  position: relative;
+  z-index: 1;
+
   &--background {
     background-color: $background-color;
   }
@@ -17,6 +20,8 @@
 
   @media (min-width: $desktop-width) {
     justify-content: space-around;
+    position: relative;
+    z-index: 1;
     padding: 0;
     width: 42.8%;
     background-color: $icon-content-color;

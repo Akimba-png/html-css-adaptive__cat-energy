@@ -88,7 +88,7 @@ function init() {
     myPlacemark = new ymaps.Placemark([59.938635, 30.323118], {
     }, {
       iconLayout: "default#image",
-      iconImageHref: "../img/map-pin-tablet.png",
+      iconImageHref: "img/map-pin-tablet.webp",
       iconImageSize: [113, 106],
       iconImageOffset: [-51, -54]
     })
@@ -108,7 +108,7 @@ function init() {
     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
     }, {
       iconLayout: "default#image",
-      iconImageHref: "../img/map-pin-tablet.png",
+      iconImageHref: "img/map-pin-tablet.webp",
       iconImageSize: [113, 106],
       iconImageOffset: [-51, -54]
     })
@@ -128,7 +128,7 @@ function init() {
     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
     }, {
       iconLayout: "default#image",
-      iconImageHref: "../img/map-pin-mobile.png",
+      iconImageHref: "img/map-pin-mobile.webp",
       iconImageSize: [57, 53],
       iconImageOffset: [-25, -42]
     })

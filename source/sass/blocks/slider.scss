@@ -12,6 +12,7 @@
     margin: 0;
     margin-left: auto;
     width: 87.7%;
+    width: 570px;
   }
 }
 
@@ -103,6 +104,7 @@
     border: 12px solid $icon-content-color;
     box-shadow: 0 0 0 1px $owner-input-border-color, 0 1px 3px 0 $range-shadow-color;
     border-radius: 50%;
+    cursor: pointer;
 
     &:hover {
       box-shadow: 0 0 0 1px $owner-input-border-color, 0 2px 4px 0 $range-hover-shadow-color;
