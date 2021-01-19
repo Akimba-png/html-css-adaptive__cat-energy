@@ -1,4 +1,4 @@
-.slider__toggles {
+.slider {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -11,7 +11,7 @@
   @media (min-width: $desktop-width) {
     margin: 0;
     margin-left: auto;
-    width: 87.7%;
+    width: 570px;
   }
 }
 
@@ -66,7 +66,7 @@
 
 .slider__range-scale {
   display: flex;
-  justify-content: left;
+  justify-content: flex-start;
   position: relative;
   align-self: center;
   box-sizing: border-box;
@@ -103,6 +103,7 @@
     border: 12px solid $icon-content-color;
     box-shadow: 0 0 0 1px $owner-input-border-color, 0 1px 3px 0 $range-shadow-color;
     border-radius: 50%;
+    cursor: pointer;
 
     &:hover {
       box-shadow: 0 0 0 1px $owner-input-border-color, 0 2px 4px 0 $range-hover-shadow-color;

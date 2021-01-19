@@ -112,9 +112,9 @@ exports.styles = styles;
 // Scripts
 
 const jsUglify = () => {
-  return gulp.src("source/js/main-navigation.js")
+  return gulp.src("source/js/scripts.js")
   .pipe(uglify())
-  .pipe(rename("main-navigation.min.js"))
+  .pipe(rename("scripts.min.js"))
   .pipe(gulp.dest("build/js"))
   .pipe(sync.stream());
 }
@@ -140,6 +140,7 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
+  gulp.watch("source/js/**/*.js", gulp.series("jsUglify"));
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html", gulp.series("html"));
 }

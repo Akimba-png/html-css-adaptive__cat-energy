@@ -9,15 +9,7 @@
     margin-left: $desktop-indent;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    z-index: 1;
     margin-top: -10px;
-  }
-}
-
-.page-footer__map-block {
-  @media (min-width: $desktop-width) {
-    grid-column: 1 / 2;
-    grid-row: 1 / 4;
   }
 }
 
@@ -28,6 +20,11 @@
 
   @media (min-width: $tablet-width) {
     height: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
   }
 }
 
