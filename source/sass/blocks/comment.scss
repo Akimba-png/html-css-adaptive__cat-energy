@@ -43,6 +43,7 @@
 
   @media (min-width: $tablet-width) {
     @include tablet-form-padding;
+    min-height: 293px;
   }
 
   @media (min-width: $desktop-width) {
