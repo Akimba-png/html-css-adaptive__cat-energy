@@ -87,10 +87,6 @@ function init() {
       controls: ["smallMapDefaultSet"]
     }),
 
-    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-      '<div style="color: #ffffff; font-weight: bold;">$[properties.iconContent]</div>'
-    ),
-
     myPlacemark = new ymaps.Placemark([59.938635, 30.323118], {
     }, {
       iconLayout: "default#image",
@@ -107,10 +103,6 @@ function init() {
       controls: ["smallMapDefaultSet"]
     }),
 
-    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-      '<div style="color: #ffffff; font-weight: bold;">$[properties.iconContent]</div>'
-    ),
-
     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
     }, {
       iconLayout: "default#image",
@@ -126,10 +118,6 @@ function init() {
       zoom: 14,
       controls: ["smallMapDefaultSet"]
     }),
-
-    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-      '<div style="color: #ffffff; font-weight: bold;">$[properties.iconContent]</div>'
-    ),
 
     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
     }, {
