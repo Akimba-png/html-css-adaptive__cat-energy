@@ -4,10 +4,12 @@
 
   @media (min-width: $tablet-width) {
     min-width: (440 / 708) * 100%;
+    max-width: (450 / 708) * 100%;
   }
 
   @media (min-width: $desktop-width) {
     min-width: 39.3%;
+    max-width: (480 / 1018) * 100%;
   }
 }
 
@@ -75,6 +77,8 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
   }
 
   @media (min-width: $desktop-width) {

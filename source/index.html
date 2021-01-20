@@ -7,7 +7,6 @@
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
-
 </head>
 
 <body class="page__body">
@@ -135,7 +134,7 @@
         <div class="instance__toggles slider js-slider">
           <button class="slider__toggle slider__toggle--before js-slider__toggle--before"><span class="visually-hidden">переключить на изображение питомца до программы</span>Было</button>
           <div class="slider__range-scale js-slider__range-scale">
-            <div class="slider__range-toggle js-slider__range-toggle"></div>
+            <div class="slider__range-toggle js-slider__range-toggle" tabindex="0"><span class="visually-hidden">переключить изображение состояния питомца</span></div>
           </div>
           <button class="slider__toggle slider__toggle--after js-slider__toggle--after"><span class="visually-hidden">переключить на изображение питомца после программы</span>Стало</button>
         </div>
@@ -149,7 +148,9 @@
         <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__town">Санкт-Петербург</span></address>
       </div>
     </div>
-    <div class="page-footer__map" id="map"></div>
+    <div class="page-footer__map" id="map">
+      <iframe class="page-footer__map-static page-footer__map-static--no-js" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533207!2d30.320858716352063!3d59.938716481876256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1609158612668!5m2!1sru!2sru" width="600" height="362" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
     <div class="page-footer__references references">
       <div class="references__wrapper">
         <a class="references__logo" href="#top" aria-label="перейти к началу страницы">
@@ -182,7 +183,7 @@
     </div>
   </footer>
 
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=07126305-4288-4c9d-a957-7ecc202ca1fb&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=07126305-4288-4c9d-a957-7ecc202ca1fb&lang=ru_RU"></script>
   <script src="js/scripts.min.js"></script>
 
 </body>

@@ -69,6 +69,10 @@ if (document.querySelector(".js-slider")) {
 }
 
 // Map
+const mapStatic = document.querySelector(".page-footer__map-static--no-js");
+
+mapStatic.classList.remove("page-footer__map-static--no-js");
+
 ymaps.ready(init);
 
 const mediaQueryTablet = window.matchMedia("(min-width: 768px)");
@@ -84,7 +88,7 @@ function init() {
     }),
 
     MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      '<div style="color: #ffffff; font-weight: bold;">$[properties.iconContent]</div>'
     ),
 
     myPlacemark = new ymaps.Placemark([59.938635, 30.323118], {
@@ -104,7 +108,7 @@ function init() {
     }),
 
     MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      '<div style="color: #ffffff; font-weight: bold;">$[properties.iconContent]</div>'
     ),
 
     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
@@ -124,7 +128,7 @@ function init() {
     }),
 
     MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      '<div style="color: #ffffff; font-weight: bold;">$[properties.iconContent]</div>'
     ),
 
     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {

@@ -25,7 +25,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 157px;
+      bottom: 78px;
       left: $mobile-indent;
       right: $mobile-indent;
       border-bottom: 1px solid $dividing-line-color;
@@ -71,21 +71,24 @@
 .references__social-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
   align-items: center;
   margin: 0;
   margin-left: -4px;
   padding: 0;
   padding-top: 21px;
+  padding-bottom: 16px;
   width: (130 / 280) * 100%;
   list-style: none;
 
   @media (min-width: $tablet-width) {
     justify-content: space-between;
-    flex-wrap: wrap;
     box-sizing: border-box;
     margin: 0;
-    margin-left: 35px;
     padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 35px;
     width: (139 / 708) * 100%;
   }
 

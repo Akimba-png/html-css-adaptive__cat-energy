@@ -28,6 +28,19 @@
   }
 }
 
+.page-footer__map-static {
+  display: none;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+
+  &--no-js {
+    display: block;
+  }
+}
+
 .page-footer__references {
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;

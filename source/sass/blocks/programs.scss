@@ -6,7 +6,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 70px;
+    margin-bottom: 39px;
   }
 }
 
@@ -39,17 +39,21 @@
   position: relative;
   box-sizing: border-box;
   padding-top: 29px;
+  padding-bottom: 15px;
   min-height: 266px;
   background-color: $background-color;
 
   @media (min-width: $tablet-width) {
     padding: 0;
     padding-top: 76px;
+    padding-bottom: 55px;
     padding-left: (52 / 708) * 100%;
     min-height: 372px;
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+    padding-bottom: 60px;
     padding-left: (22 / 518) * 100%;
     width: (570 / 1220) * 100%;
     min-height: 374px;
@@ -170,10 +174,6 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 30px;
   }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 0;
-  }
 }
 
 .programs__title {
@@ -249,7 +249,7 @@
     top: 2px;
     right: 4px;
     width: 24px;
-    height: 18px;
+    height: 20px;
     background-image: url("../img/icons/sprite.svg#arrow");
     background-repeat: no-repeat;
 
@@ -263,8 +263,26 @@
     }
   }
 
+  &:hover::before {
+    top: 0;
+    right: -22px;
+    width: 50px;
+    height: 20px;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+
+    &:hover::before {
+      top: 5px;
+      right: -30px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:hover::before {
+      right: -32px;
+    }
   }
 }
