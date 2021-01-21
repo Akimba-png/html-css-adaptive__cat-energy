@@ -97,6 +97,10 @@
   }
 }
 
+.purpose__input:focus + .purpose__label::before {
+  outline: auto;
+}
+
 .purpose__input:disabled + .purpose__label {
   opacity: 0.3;
 }

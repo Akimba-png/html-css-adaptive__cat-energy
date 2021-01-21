@@ -94,6 +94,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 20px;
+    min-height: 52px;
 
     &--tel {
       margin-left: -3px;
@@ -111,6 +112,7 @@
   grid-template-rows: 38px auto;
   align-items: center;
   position: relative;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     grid-template-rows: auto;
@@ -136,6 +138,9 @@
   box-shadow: none;
 
   &:disabled {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    height: 43px;
     border: 2px solid $text-color;
     background-color: transparent;
 
@@ -145,6 +150,9 @@
   }
 
   &:invalid {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    height: 43px;
     border: 2px solid $error-color;
 
     & + .contact-details__img {
@@ -152,12 +160,27 @@
     }
 
     &:placeholder-shown {
+      margin-top: 0;
+      margin-bottom: 0;
+      height: 45px;
       border: 1px solid $owner-input-border-color;
+
+      &:hover {
+        margin-top: 1px;
+        margin-bottom: 1px;
+        height: 43px;
+      }
 
       & + .contact-details__img {
         color: $subtitle-color;
       }
     }
+  }
+
+  &:hover {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    height: 43px;
   }
 
   @media (min-width: $tablet-width) {
@@ -169,6 +192,26 @@
 
     &--tel {
       margin-left: 17px;
+    }
+
+    &:disabled {
+      height: 50px;
+    }
+
+    &:invalid {
+      height: 50px;
+
+      &:placeholder-shown {
+        height: 52px;
+
+        &:hover {
+          height: 50px;
+        }
+      }
+    }
+
+    &:hover {
+      height: 50px;
     }
   }
 

@@ -22,6 +22,7 @@
 
   @media (min-width: $desktop-width) {
     border: none;
+    overflow: hidden;
   }
 }
 
@@ -235,8 +236,7 @@
       left: 365px;
       z-index: -99;
       width: 200%;
-      height: 150%;
-      overflow: hidden;
+      height: 200%;
       background-color: $alternative-background-color;
     }
   }

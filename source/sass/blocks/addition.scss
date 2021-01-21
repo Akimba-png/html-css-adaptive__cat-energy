@@ -145,6 +145,12 @@
   border-color: $hover-input-color;
 }
 
+
+.addition__input:focus + .addition__label::before {
+  outline: auto;
+}
+
+
 .addition__input:disabled + .addition__label {
   opacity: 0.3;
 }
