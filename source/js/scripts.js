@@ -10,13 +10,13 @@ menuToggle.addEventListener("click", function () {
 if (document.querySelector(".js-slider")) {
 
   // Slider
-  const imageBefore = document.querySelector(".js-instance__picture-item--before");
-  const imageAfter = document.querySelector(".js-instance__picture-item--after");
+  const imageBefore = document.querySelector(".js-instance-before");
+  const imageAfter = document.querySelector(".js-instance-after");
   const slider = document.querySelector(".js-slider");
-  const buttonBefore = slider.querySelector(".js-slider__toggle--before");
-  const buttonAfter = slider.querySelector(".js-slider__toggle--after");
-  const bar = slider.querySelector(".js-slider__range-scale");
-  const toggle = slider.querySelector(".js-slider__range-toggle");
+  const buttonBefore = slider.querySelector(".js-slider-before");
+  const buttonAfter = slider.querySelector(".js-slider-after");
+  const bar = slider.querySelector(".js-slider-scale");
+  const toggle = slider.querySelector(".js-slider-range-toggle");
   let LimitMovementX;
   let thumbCoord;
 
