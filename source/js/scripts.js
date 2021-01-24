@@ -69,10 +69,6 @@ if (document.querySelector(".js-slider")) {
 }
 
 // Map
-const mapStatic = document.querySelector(".page-footer__map-static--no-js");
-
-mapStatic.classList.remove("page-footer__map-static--no-js");
-
 ymaps.ready(init);
 
 const mediaQueryTablet = window.matchMedia("(min-width: 768px)");

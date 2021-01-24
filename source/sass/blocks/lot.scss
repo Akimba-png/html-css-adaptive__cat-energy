@@ -4,10 +4,12 @@
   border-bottom: 1px solid $main-goods-border-color;
   box-sizing: border-box;
   padding-top: 21px;
+  padding-bottom: 21px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 59px;
     padding-top: 8px;
+    padding-bottom: 36px;
     width: 324px;
     min-height: 511px;
     border: none;
@@ -49,7 +51,6 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-
 
   @media (min-width: $tablet-width) {
     display: flex;
