@@ -5,6 +5,7 @@
   box-sizing: border-box;
   padding-top: 21px;
   padding-bottom: 21px;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 59px;
@@ -27,16 +28,20 @@
       content: "";
       display: block;
       position: absolute;
-      bottom: 0;
+      top: 81px;
       z-index: -1;
       width: 100%;
-      min-height: 430px;
+      height: 100%;
       background-color: $background-color;
     }
   }
 
   &--all {
     min-height: 208px;
+
+    @media (min-width: $tablet-width) {
+      border-bottom: 2px solid $background-color;
+    }
 
     &::before {
       box-sizing: border-box;

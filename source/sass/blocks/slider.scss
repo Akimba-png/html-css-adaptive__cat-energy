@@ -1,7 +1,8 @@
 .slider {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 71%;
 
   @media (min-width: $tablet-width) {
@@ -9,7 +10,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0;
+    margin-right: initial;
     margin-left: auto;
     width: 570px;
   }
