@@ -87,4 +87,9 @@
     font-size: 20px;
     line-height: 30px;
   }
+
+  &:focus {
+    border: 2px solid $text-color;
+    outline: none;
+  }
 }

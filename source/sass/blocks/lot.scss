@@ -4,10 +4,13 @@
   border-bottom: 1px solid $main-goods-border-color;
   box-sizing: border-box;
   padding-top: 21px;
+  padding-bottom: 21px;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 59px;
     padding-top: 8px;
+    padding-bottom: 36px;
     width: 324px;
     min-height: 511px;
     border: none;
@@ -25,16 +28,20 @@
       content: "";
       display: block;
       position: absolute;
-      bottom: 0;
+      top: 81px;
       z-index: -1;
       width: 100%;
-      min-height: 430px;
+      height: 100%;
       background-color: $background-color;
     }
   }
 
   &--all {
     min-height: 208px;
+
+    @media (min-width: $tablet-width) {
+      border-bottom: 2px solid $background-color;
+    }
 
     &::before {
       box-sizing: border-box;
@@ -49,7 +56,6 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-
 
   @media (min-width: $tablet-width) {
     display: flex;

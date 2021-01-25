@@ -137,11 +137,18 @@
   color: $text-color;
   box-shadow: none;
 
-  &:disabled {
+  &:hover {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    height: 43px;
+  }
+
+  &:focus {
     margin-top: 1px;
     margin-bottom: 1px;
     height: 43px;
     border: 2px solid $text-color;
+    outline: none;
     background-color: transparent;
 
     & + .contact-details__img {
@@ -165,22 +172,28 @@
       height: 45px;
       border: 1px solid $owner-input-border-color;
 
+      & + .contact-details__img {
+        color: $subtitle-color;
+      }
+
       &:hover {
         margin-top: 1px;
         margin-bottom: 1px;
         height: 43px;
       }
 
-      & + .contact-details__img {
-        color: $subtitle-color;
+      &:focus {
+        margin-top: 1px;
+        margin-bottom: 1px;
+        height: 43px;
+        border: 2px solid $text-color;
+        background-color: transparent;
+
+        & + .contact-details__img {
+          color: $main-color;
+        }
       }
     }
-  }
-
-  &:hover {
-    margin-top: 1px;
-    margin-bottom: 1px;
-    height: 43px;
   }
 
   @media (min-width: $tablet-width) {
@@ -194,7 +207,7 @@
       margin-left: 17px;
     }
 
-    &:disabled {
+    &:focus {
       height: 50px;
     }
 
@@ -205,6 +218,10 @@
         height: 52px;
 
         &:hover {
+          height: 50px;
+        }
+
+        &:focus {
           height: 50px;
         }
       }

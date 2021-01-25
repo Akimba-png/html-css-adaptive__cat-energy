@@ -17,27 +17,19 @@
   display: block;
   width: 100%;
   height: 362px;
+  background-image: url("../img/map-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
 
   @media (min-width: $tablet-width) {
     height: 400px;
+    background-image: url("../img/map-tablet.png");
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
     grid-row: 1 / 4;
-  }
-}
-
-.page-footer__map-static {
-  display: none;
-  width: 100%;
-
-  @media (min-width: $tablet-width) {
-    height: 400px;
-  }
-
-  &--no-js {
-    display: block;
+    background-image: url("../img/map-desktop.png");
   }
 }
 
