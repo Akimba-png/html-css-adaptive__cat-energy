@@ -11,3 +11,8 @@ build/
 css/
 npm-debug.*
 Thumbs.db
+
+# deploy
+/.firebase
+.firebaserc
+firebase.json
